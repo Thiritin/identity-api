@@ -15,10 +15,13 @@ class CreateDepartmentUserTable extends Migration
     {
         Schema::disableForeignKeyConstraints();
 
-        Schema::create('department_user', function (Blueprint $table) {
-            $table->foreignId('department_id')->constrained()->cascadeOnDelete();
-            $table->foreignId('user_id')->constrained()->cascadeOnDelete();
-        });
+        Schema::create(
+            'department_user',
+            function (Blueprint $table) {
+                $table->foreignId('department_id')->constrained()->cascadeOnDelete();
+                $table->foreignId('user_id')->constrained()->cascadeOnDelete();
+            }
+        );
 
         Schema::enableForeignKeyConstraints();
     }
