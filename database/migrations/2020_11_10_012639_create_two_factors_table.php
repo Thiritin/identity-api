@@ -15,14 +15,17 @@ class CreateTwoFactorsTable extends Migration
     {
         Schema::disableForeignKeyConstraints();
 
-        Schema::create('two_factors', function (Blueprint $table) {
-            $table->uuid('id')->primary();
-            $table->uuid('user_id');
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->string('secret')->nullable()->unique();
-            $table->string('type');
-            $table->timestamps();
-        });
+        Schema::create(
+            'two_factors',
+            function (Blueprint $table) {
+                $table->uuid('id')->primary();
+                $table->uuid('user_id');
+                $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+                $table->string('secret')->nullable()->unique();
+                $table->string('type');
+                $table->timestamps();
+            }
+        );
 
         Schema::enableForeignKeyConstraints();
     }

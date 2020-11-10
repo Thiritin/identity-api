@@ -15,12 +15,15 @@ class CreateDepartmentsTable extends Migration
     {
         Schema::disableForeignKeyConstraints();
 
-        Schema::create('departments', function (Blueprint $table) {
-            $table->uuid('id')->primary();
-            $table->string('name');
-            $table->text('logo')->nullable();
-            $table->timestamps();
-        });
+        Schema::create(
+            'departments',
+            function (Blueprint $table) {
+                $table->uuid('id')->primary();
+                $table->string('name');
+                $table->text('logo')->nullable();
+                $table->timestamps();
+            }
+        );
 
         Schema::enableForeignKeyConstraints();
     }
