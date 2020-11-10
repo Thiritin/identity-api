@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3d13779feddb1043c343fdb360017bb3",
+    "content-hash": "526a3bc3c631b1efafbed75880a4831c",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -4923,6 +4923,68 @@
             "time": "2020-10-27T10:11:13+00:00"
         },
         {
+            "name": "thiritin/hydra-client",
+            "version": "v1.9.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Thiritin/hydra-client-php.git",
+                "reference": "3de80b23f8b8a5b6c0c5609e9830fbc41c56d09e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Thiritin/hydra-client-php/zipball/3de80b23f8b8a5b6c0c5609e9830fbc41c56d09e",
+                "reference": "3de80b23f8b8a5b6c0c5609e9830fbc41c56d09e",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "guzzlehttp/guzzle": "^7.0",
+                "php": ">=7.1"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "~2.12",
+                "phpunit/phpunit": "^7.4",
+                "squizlabs/php_codesniffer": "~2.6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Ory\\Hydra\\Client\\": "lib/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Ory\\Hydra\\Client\\": "test/"
+                }
+            },
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "ORY GmbH",
+                    "homepage": "https://www.ory.sh"
+                }
+            ],
+            "description": "Welcome to the ORY Hydra HTTP API documentation. You will find documentation for all HTTP APIs here.",
+            "homepage": "https://github.com/ory/hydra-client-php",
+            "keywords": [
+                "api",
+                "openapi",
+                "openapi-generator",
+                "openapitools",
+                "php",
+                "rest",
+                "sdk"
+            ],
+            "support": {
+                "source": "https://github.com/Thiritin/hydra-client-php/tree/v1.9.1"
+            },
+            "time": "2020-11-10T12:08:04+00:00"
+        },
+        {
             "name": "tijsverkoyen/css-to-inline-styles",
             "version": "2.2.3",
             "source": {
@@ -9030,7 +9092,7 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.3|^8.0"
+        "php": "^7.4|^8.0"
     },
     "platform-dev": [],
     "plugin-api-version": "2.0.0"
