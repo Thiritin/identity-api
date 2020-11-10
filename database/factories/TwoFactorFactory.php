@@ -2,17 +2,18 @@
 
 namespace Database\Factories;
 
+use App\Models\TwoFactor;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class UserFactory extends Factory
+class TwoFactorFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = User::class;
+    protected $model = TwoFactor::class;
 
     /**
      * Define the model's default state.
@@ -22,12 +23,9 @@ class UserFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->name,
-            'email' => $this->faker->safeEmail,
-            'email_verified_at' => $this->faker->dateTime(),
-            'avatar' => $this->faker->text,
-            'password' => $this->faker->password,
-            'remember_token' => $this->faker->word,
+            'user_id' => User::factory(),
+            'secret' => $this->faker->word,
+            'type' => $this->faker->word,
         ];
     }
 }
