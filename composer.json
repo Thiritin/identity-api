@@ -18,7 +18,8 @@
         "spatie/enum": "^3.5",
         "spatie/laravel-activitylog": "^3.16",
         "spatie/laravel-permission": "^3.17",
-        "spatie/laravel-query-builder": "^3.3"
+        "spatie/laravel-query-builder": "^3.3",
+        "thiritin/hydra-client": "^1.9"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^2.8",
@@ -36,6 +37,12 @@
         "preferred-install": "dist",
         "sort-packages": true
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:Thiritin/hydra-client-php.git"
+        }
+    ],
     "extra": {
         "laravel": {
             "dont-discover": []
