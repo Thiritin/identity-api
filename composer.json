@@ -19,7 +19,8 @@
         "spatie/laravel-activitylog": "^3.16",
         "spatie/laravel-permission": "^3.17",
         "spatie/laravel-query-builder": "^3.3",
-        "thiritin/hydra-client": "^1.9"
+        "thiritin/hydra-client": "^1.9",
+        "ext-json": "*"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^2.8",

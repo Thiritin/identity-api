@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Stride Authentication Backend
+  ~
+  ~ @copyright	Copyright (c) 2020 Martin Becker (https://martin-becker.ovh)
+  ~ @license		GNU AGPLv3 (GNU Affero General Public License v3.0)
+  ~ @link		https://stride.thiritin.com
+  -->
+
 <phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:noNamespaceSchemaLocation="./vendor/phpunit/phpunit/phpunit.xsd"
          bootstrap="vendor/autoload.php"
