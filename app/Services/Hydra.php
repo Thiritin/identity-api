@@ -1,10 +1,15 @@
 <?php
-
+/*
+ * Stride Authentication Backend
+ *
+ * @copyright	Copyright (c) 2020 Martin Becker (https://martin-becker.ovh)
+ * @license		GNU AGPLv3 (GNU Affero General Public License v3.0)
+ * @link		https://stride.thiritin.com
+ */
 
 namespace App\Services;
 
 
-use App\User;
 use Exception;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Ory\Hydra\Client\Api\AdminApi;
@@ -34,15 +39,17 @@ class Hydra
         }
     }
 
-    public function acceptLoginRequest(string $loginChallenge)
+    public function acceptLoginRequest(int $userId, string $loginChallenge): array
     {
         try {
-            return $this->api->acceptLoginRequest(
-                $loginChallenge,
-                new AcceptLoginRequest(
-                    [
-                        'subject' => User::first()->uuid,
-                    ]
+            return json_decode(
+                $this->api->acceptLoginRequest(
+                    $loginChallenge,
+                    new AcceptLoginRequest(
+                        [
+                            'subject' => $userId,
+                        ]
+                    )
                 )
             );
         } catch (Exception $e) {

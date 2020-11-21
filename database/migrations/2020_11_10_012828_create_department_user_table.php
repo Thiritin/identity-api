@@ -1,4 +1,11 @@
 <?php
+/*
+ * Stride Authentication Backend
+ *
+ * @copyright	Copyright (c) 2020 Martin Becker (https://martin-becker.ovh)
+ * @license		GNU AGPLv3 (GNU Affero General Public License v3.0)
+ * @link		https://stride.thiritin.com
+ */
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -18,8 +25,8 @@ class CreateDepartmentUserTable extends Migration
         Schema::create(
             'department_user',
             function (Blueprint $table) {
-                $table->foreignId('department_id')->constrained()->cascadeOnDelete();
-                $table->foreignId('user_id')->constrained()->cascadeOnDelete();
+                $table->foreignUuid('department_id')->index()->constrained()->cascadeOnDelete();
+                $table->foreignUuid('user_id')->index()->constrained()->cascadeOnDelete();
             }
         );
 

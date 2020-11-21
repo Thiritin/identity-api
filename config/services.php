@@ -1,4 +1,11 @@
 <?php
+/*
+ * Stride Authentication Backend
+ *
+ * @copyright	Copyright (c) 2020 Martin Becker (https://martin-becker.ovh)
+ * @license		GNU AGPLv3 (GNU Affero General Public License v3.0)
+ * @link		https://stride.thiritin.com
+ */
 
 return [
 
@@ -28,6 +35,10 @@ return [
         'key' => env('AWS_ACCESS_KEY_ID'),
         'secret' => env('AWS_SECRET_ACCESS_KEY'),
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
+    ],
+
+    'hydra' => [
+        'host' => env('HYDRA_HOST'),
     ],
 
 ];

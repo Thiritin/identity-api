@@ -7,19 +7,16 @@
  * @link		https://stride.thiritin.com
  */
 
-namespace Tests\Unit;
+namespace App\Http\Requests;
 
-use PHPUnit\Framework\TestCase;
+use Illuminate\Foundation\Http\FormRequest;
 
-class ExampleTest extends TestCase
+class ConsentRequest extends FormRequest
 {
-    /**
-     * A basic test example.
-     *
-     * @return void
-     */
-    public function testBasicTest()
+    public function rules()
     {
-        $this->assertTrue(true);
+        return [
+            'consent_challenge' => 'required',
+        ];
     }
 }
