@@ -27,7 +27,7 @@ class CreateGroupUserTable extends Migration
             function (Blueprint $table) {
                 $table->foreignUuid('group_id')->constrained()->cascadeOnDelete();
                 $table->foreignUuid('user_id')->constrained()->cascadeOnDelete();
-                $table->string('type')->nullable();
+                $table->string('title')->nullable();
                 $table->tinyInteger("authorization_level", false, true)->default(1)->comment(
                     '0 => Guest, 1 => Member, 2 => Administrator'
                 );

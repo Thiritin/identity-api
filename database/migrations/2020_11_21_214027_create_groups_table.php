@@ -27,6 +27,7 @@ class CreateGroupsTable extends Migration
             function (Blueprint $table) {
                 $table->uuid('id')->primary();
                 $table->string('name');
+                $table->string('type')->nullable();
                 $table->text('logo')->nullable();
                 $table->timestamps();
             }
