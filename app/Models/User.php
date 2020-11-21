@@ -10,14 +10,13 @@
 namespace App\Models;
 
 use Carbon\Carbon;
-use Illuminate\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
 use Jamesh\Uuid\HasUuid;
-
+use Spatie\Activitylog\Traits\LogsActivity;
+use Spatie\Permission\Traits\HasRoles;
 
 /**
  * @property string $id
@@ -32,7 +31,7 @@ use Jamesh\Uuid\HasUuid;
  */
 class User extends Authenticatable
 {
-    use HasFactory, HasUuid, Notifiable, MustVerifyEmail;
+    use HasFactory, HasUuid, HasRoles, LogsActivity;
 
     /**
      * The attributes that are mass assignable.
@@ -42,6 +41,7 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
+        'email_verified_at',
         'avatar',
         'password',
     ];
