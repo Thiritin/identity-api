@@ -59,6 +59,13 @@ class Group extends Model
      */
     public function users()
     {
-        return $this->belongsToMany(User::class);
+        return $this->belongsToMany(User::class)
+            ->using('App\Models\RoleUser')
+            ->withPivot(
+                [
+                    'created_by',
+                    'updated_by',
+                ]
+            );
     }
 }
