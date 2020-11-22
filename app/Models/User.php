@@ -1,14 +1,15 @@
 <?php
 /*
- * Strive Authentication Backend
+ * Eurofurence Identity Provider Authentication Backend
  *
  * @copyright	Copyright (c) 2020 Martin Becker (https://martin-becker.ovh)
  * @license		GNU AGPLv3 (GNU Affero General Public License v3.0)
- * @link		https://github.com/Thiritin/strive
+ * @link		https://github.com/Thiritin/ef-idp
  */
 
 namespace App\Models;
 
+use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Carbon\Carbon;
 use Eloquent;
 use Illuminate\Database\Eloquent\Builder;
@@ -62,7 +63,7 @@ use Spatie\Permission\Traits\HasRoles;
  */
 class User extends Authenticatable
 {
-    use HasFactory, HasUuid, HasRoles, LogsActivity;
+    use HasFactory, HasUuid, HasRoles, LogsActivity, CrudTrait;
 
     /**
      * The attributes that are mass assignable.

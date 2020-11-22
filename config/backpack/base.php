@@ -1,10 +1,10 @@
 <?php
 /*
- * Strive Authentication Backend
+ * Eurofurence Identity Provider Authentication Backend
  *
  * @copyright	Copyright (c) 2020 Martin Becker (https://martin-becker.ovh)
  * @license		GNU AGPLv3 (GNU Affero General Public License v3.0)
- * @link		https://github.com/Thiritin/strive
+ * @link		https://github.com/Thiritin/ef-idp
  */
 
 use Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull;
@@ -22,8 +22,8 @@ return [
     */
 
     // Date & Datetime Format Syntax: https://carbon.nesbot.com/docs/#api-localization
-    'default_date_format' => 'D MMM YYYY',
-    'default_datetime_format' => 'D MMM YYYY, HH:mm',
+    'default_date_format' => 'dd.mm.YYYY',
+    'default_datetime_format' => 'dd.mm.YYYY, HH:mm',
 
     // Direction, according to language
     // (left-to-right vs right-to-left)
@@ -34,7 +34,7 @@ return [
     // ----
 
     // Project name. Shown in the window title.
-    'project_name' => 'Backpack Admin Panel',
+    'project_name' => 'Eurofurence Identity Provider',
 
     // When clicking on the admin panel's top-left logo/name,
     // where should the user be redirected?
@@ -81,13 +81,13 @@ return [
     // ------
 
     // Menu logo. You can replace this with an <img> tag if you have a logo.
-    'project_logo' => '<b>Back</b>pack',
+    'project_logo' => '<b>Identity</b> Provider',
 
     // Show / hide breadcrumbs on admin panel pages.
     'breadcrumbs' => true,
 
     // Horizontal navbar classes. Helps make the admin panel look similar to your project's design.
-    'header_class' => 'app-header bg-light border-0 navbar',
+    'header_class' => 'app-header bg-dark navbar-dark border-0 navbar',
     // For background colors use: bg-dark, bg-primary, bg-secondary, bg-danger, bg-warning, bg-success, bg-info, bg-blue, bg-light-blue, bg-indigo, bg-purple, bg-pink, bg-red, bg-orange, bg-yellow, bg-green, bg-teal, bg-cyan, bg-white
     // For links to be visible on different background colors use: "navbar-dark", "navbar-light", "navbar-color"
 
@@ -249,7 +249,7 @@ return [
 
     // The guard that protects the Backpack admin panel.
     // If null, the config.auth.defaults.guard value will be used.
-    'guard' => 'backpack',
+    'guard' => null,
 
     // The password reset configuration for Backpack.
     // If null, the config.auth.defaults.passwords value will be used.

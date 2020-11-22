@@ -17,5 +17,5 @@ RUN apk del -f .build-deps
 COPY composer.json composer.json
 COPY composer.lock composer.lock
 RUN composer install --prefer-dist --no-scripts --no-autoloader && rm -rf /root/.composer
-COPY . /app/
-RUN composer dump-autoload --optimize
+COPY --chown=www-data:www-data . /app/
+RUN composer install
