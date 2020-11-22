@@ -63,8 +63,9 @@ class Group extends Model
             ->using('App\Models\RoleUser')
             ->withPivot(
                 [
-                    'created_by',
-                    'updated_by',
+                    'title',
+                    'authorization_level',
+                    'is_director',
                 ]
             );
     }

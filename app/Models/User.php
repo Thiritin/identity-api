@@ -100,9 +100,17 @@ class User extends Authenticatable
     /**
      * @return BelongsToMany
      */
-    public function departments()
+    public function groups()
     {
-        return $this->belongsToMany(Department::class);
+        return $this->belongsToMany(Group::class)
+            ->using('App\Models\RoleUser')
+            ->withPivot(
+                [
+                    'title',
+                    'authorization_level',
+                    'is_director',
+                ]
+            );
     }
 
     /**
