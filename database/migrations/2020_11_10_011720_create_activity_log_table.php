@@ -1,10 +1,10 @@
 <?php
 /*
- * Strive Authentication Backend
+ * Eurofurence Identity Provider Authentication Backend
  *
  * @copyright	Copyright (c) 2020 Martin Becker (https://martin-becker.ovh)
  * @license		GNU AGPLv3 (GNU Affero General Public License v3.0)
- * @link		https://github.com/Thiritin/strive
+ * @link		https://github.com/Thiritin/ef-idp
  */
 
 use Illuminate\Database\Migrations\Migration;
@@ -24,8 +24,8 @@ class CreateActivityLogTable extends Migration
                 $table->bigIncrements('id');
                 $table->string('log_name')->nullable();
                 $table->text('description');
-                $table->nullableMorphs('subject', 'subject');
-                $table->nullableMorphs('causer', 'causer');
+                $table->nullableUuidMorphs('subject', 'subject');
+                $table->nullableUuidMorphs('causer', 'causer');
                 $table->json('properties')->nullable();
                 $table->timestamps();
                 $table->index('log_name');

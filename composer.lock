@@ -4,7 +4,7 @@
     "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
     "This file is @generated automatically"
   ],
-  "content-hash": "eafbaadf09f60f34710bf43f72dc4244",
+  "content-hash": "4555072981940bf6b0525ff08f4c0d84",
   "packages": [
     {
       "name": "asm89/stack-cors",
@@ -15,47 +15,47 @@
         "reference": "8d8f88b3b3830916be94292c1fbce84433efb1aa"
       },
       "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/asm89/stack-cors/zipball/8d8f88b3b3830916be94292c1fbce84433efb1aa",
-                "reference": "8d8f88b3b3830916be94292c1fbce84433efb1aa",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.0|^8.0",
-                "symfony/http-foundation": "~2.7|~3.0|~4.0|~5.0",
-                "symfony/http-kernel": "~2.7|~3.0|~4.0|~5.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^6|^7|^8|^9",
-                "squizlabs/php_codesniffer": "^3.5"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Asm89\\Stack\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Alexander",
-                    "email": "iam.asm89@gmail.com"
-                }
-            ],
-            "description": "Cross-origin resource sharing library and stack middleware",
-            "homepage": "https://github.com/asm89/stack-cors",
-            "keywords": [
-              "cors",
-              "stack"
-            ],
+        "type": "zip",
+        "url": "https://api.github.com/repos/asm89/stack-cors/zipball/8d8f88b3b3830916be94292c1fbce84433efb1aa",
+        "reference": "8d8f88b3b3830916be94292c1fbce84433efb1aa",
+        "shasum": ""
+      },
+      "require": {
+        "php": "^7.0|^8.0",
+        "symfony/http-foundation": "~2.7|~3.0|~4.0|~5.0",
+        "symfony/http-kernel": "~2.7|~3.0|~4.0|~5.0"
+      },
+      "require-dev": {
+        "phpunit/phpunit": "^6|^7|^8|^9",
+        "squizlabs/php_codesniffer": "^3.5"
+      },
+      "type": "library",
+      "extra": {
+        "branch-alias": {
+          "dev-master": "2.0-dev"
+        }
+      },
+      "autoload": {
+        "psr-4": {
+          "Asm89\\Stack\\": "src/"
+        }
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "MIT"
+      ],
+      "authors": [
+        {
+          "name": "Alexander",
+          "email": "iam.asm89@gmail.com"
+        }
+      ],
+      "description": "Cross-origin resource sharing library and stack middleware",
+      "homepage": "https://github.com/asm89/stack-cors",
+      "keywords": [
+        "cors",
+        "stack"
+      ],
       "support": {
         "issues": "https://github.com/asm89/stack-cors/issues",
         "source": "https://github.com/asm89/stack-cors/tree/v2.0.2"
@@ -151,6 +151,83 @@
       "time": "2020-11-08T12:56:14+00:00"
     },
     {
+      "name": "backpack/permissionmanager",
+      "version": "6.0.4",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/Laravel-Backpack/PermissionManager.git",
+        "reference": "a21231b4ca1bce0199e778aea21109043f4c6728"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/Laravel-Backpack/PermissionManager/zipball/a21231b4ca1bce0199e778aea21109043f4c6728",
+        "reference": "a21231b4ca1bce0199e778aea21109043f4c6728",
+        "shasum": ""
+      },
+      "require": {
+        "backpack/crud": "^4.1.0",
+        "spatie/laravel-permission": "^3.0"
+      },
+      "require-dev": {
+        "phpunit/phpunit": "^9.0||^7.0",
+        "scrutinizer/ocular": "~1.1"
+      },
+      "type": "library",
+      "extra": {
+        "branch-alias": {
+          "dev-master": "1.0-dev"
+        },
+        "laravel": {
+          "providers": [
+            "Backpack\\PermissionManager\\PermissionManagerServiceProvider"
+          ]
+        }
+      },
+      "autoload": {
+        "psr-4": {
+          "Backpack\\PermissionManager\\": "src"
+        }
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "proprietary"
+      ],
+      "authors": [
+        {
+          "name": "Marius Constantin",
+          "email": "marius@updivision.com",
+          "homepage": "http://www.updivision.com",
+          "role": "Lead Developer"
+        },
+        {
+          "name": "Cristian Tabacitu",
+          "email": "hello@tabacitu.ro",
+          "homepage": "http://www.tabacitu.ro",
+          "role": "Chief Architect"
+        }
+      ],
+      "description": "Users and permissions management interface for Laravel 5 using Backpack CRUD.",
+      "homepage": "https://github.com/laravel-backpack/permissionmanager",
+      "keywords": [
+        "backpack",
+        "backpack permission",
+        "backpack roles",
+        "backpack user management",
+        "laravel backpack",
+        "manage permission",
+        "manage roles",
+        "manage users",
+        "tabacitu",
+        "updivision",
+        "users roles admin"
+      ],
+      "support": {
+        "issues": "https://github.com/Laravel-Backpack/PermissionManager/issues",
+        "source": "https://github.com/Laravel-Backpack/PermissionManager/tree/6.0.4"
+      },
+      "time": "2020-10-27T14:34:29+00:00"
+    },
+    {
       "name": "brick/math",
       "version": "0.9.1",
       "source": {
@@ -161,43 +238,43 @@
       "dist": {
         "type": "zip",
         "url": "https://api.github.com/repos/brick/math/zipball/283a40c901101e66de7061bd359252c013dcc43c",
-                "reference": "283a40c901101e66de7061bd359252c013dcc43c",
-                "shasum": ""
-            },
-            "require": {
-                "ext-json": "*",
-                "php": "^7.1|^8.0"
-            },
-            "require-dev": {
-                "php-coveralls/php-coveralls": "^2.2",
-                "phpunit/phpunit": "^7.5.15|^8.5",
-                "vimeo/psalm": "^3.5"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Brick\\Math\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Arbitrary-precision arithmetic library",
-            "keywords": [
-                "Arbitrary-precision",
-                "BigInteger",
-                "BigRational",
-                "arithmetic",
-                "bigdecimal",
-                "bignum",
-                "brick",
-                "math"
-            ],
-            "support": {
-                "issues": "https://github.com/brick/math/issues",
-                "source": "https://github.com/brick/math/tree/master"
-            },
+        "reference": "283a40c901101e66de7061bd359252c013dcc43c",
+        "shasum": ""
+      },
+      "require": {
+        "ext-json": "*",
+        "php": "^7.1|^8.0"
+      },
+      "require-dev": {
+        "php-coveralls/php-coveralls": "^2.2",
+        "phpunit/phpunit": "^7.5.15|^8.5",
+        "vimeo/psalm": "^3.5"
+      },
+      "type": "library",
+      "autoload": {
+        "psr-4": {
+          "Brick\\Math\\": "src/"
+        }
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "MIT"
+      ],
+      "description": "Arbitrary-precision arithmetic library",
+      "keywords": [
+        "Arbitrary-precision",
+        "BigInteger",
+        "BigRational",
+        "arithmetic",
+        "bigdecimal",
+        "bignum",
+        "brick",
+        "math"
+      ],
+      "support": {
+        "issues": "https://github.com/brick/math/issues",
+        "source": "https://github.com/brick/math/tree/master"
+      },
       "funding": [
         {
           "url": "https://tidelift.com/funding/github/packagist/brick/math",
@@ -353,25 +430,25 @@
       "dist": {
         "type": "zip",
         "url": "https://api.github.com/repos/dnoegel/php-xdg-base-dir/zipball/8f8a6e48c5ecb0f991c2fdcf5f154a47d85f9ffd",
-                "reference": "8f8a6e48c5ecb0f991c2fdcf5f154a47d85f9ffd",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.2"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~7.0|~6.0|~5.0|~4.8.35"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "XdgBaseDir\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-              "MIT"
-            ],
+        "reference": "8f8a6e48c5ecb0f991c2fdcf5f154a47d85f9ffd",
+        "shasum": ""
+      },
+      "require": {
+        "php": ">=5.3.2"
+      },
+      "require-dev": {
+        "phpunit/phpunit": "~7.0|~6.0|~5.0|~4.8.35"
+      },
+      "type": "library",
+      "autoload": {
+        "psr-4": {
+          "XdgBaseDir\\": "src/"
+        }
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "MIT"
+      ],
       "description": "implementation of xdg base directory specification for php",
       "support": {
         "issues": "https://github.com/dnoegel/php-xdg-base-dir/issues",
@@ -695,36 +772,36 @@
       "dist": {
         "type": "zip",
         "url": "https://api.github.com/repos/doctrine/inflector/zipball/9cf661f4eb38f7c881cac67c75ea9b00bf97b210",
-                "reference": "9cf661f4eb38f7c881cac67c75ea9b00bf97b210",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.2 || ^8.0"
-            },
-            "require-dev": {
-                "doctrine/coding-standard": "^7.0",
-                "phpstan/phpstan": "^0.11",
-                "phpstan/phpstan-phpunit": "^0.11",
-                "phpstan/phpstan-strict-rules": "^0.11",
-                "phpunit/phpunit": "^7.0 || ^8.0 || ^9.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Doctrine\\Inflector\\": "lib/Doctrine/Inflector"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
+        "reference": "9cf661f4eb38f7c881cac67c75ea9b00bf97b210",
+        "shasum": ""
+      },
+      "require": {
+        "php": "^7.2 || ^8.0"
+      },
+      "require-dev": {
+        "doctrine/coding-standard": "^7.0",
+        "phpstan/phpstan": "^0.11",
+        "phpstan/phpstan-phpunit": "^0.11",
+        "phpstan/phpstan-strict-rules": "^0.11",
+        "phpunit/phpunit": "^7.0 || ^8.0 || ^9.0"
+      },
+      "type": "library",
+      "extra": {
+        "branch-alias": {
+          "dev-master": "2.0.x-dev"
+        }
+      },
+      "autoload": {
+        "psr-4": {
+          "Doctrine\\Inflector\\": "lib/Doctrine/Inflector"
+        }
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "MIT"
+      ],
+      "authors": [
+        {
                     "name": "Guilherme Blanco",
                     "email": "guilhermeblanco@gmail.com"
                 },
@@ -2311,10 +2388,10 @@
                 "source": "https://github.com/schmittjoh/php-option/tree/1.7.5"
             },
             "funding": [
-                {
-                    "url": "https://github.com/GrahamCampbell",
-                  "type": "github"
-                },
+              {
+                "url": "https://github.com/GrahamCampbell",
+                "type": "github"
+              },
               {
                 "url": "https://tidelift.com/funding/github/packagist/phpoption/phpoption",
                 "type": "tidelift"
@@ -2403,36 +2480,36 @@
       "dist": {
         "type": "zip",
         "url": "https://api.github.com/repos/php-fig/container/zipball/b7ce3b176482dbbc1245ebf52b181af44c2cf55f",
-                "reference": "b7ce3b176482dbbc1245ebf52b181af44c2cf55f",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Psr\\Container\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "PHP-FIG",
-                    "homepage": "http://www.php-fig.org/"
-                }
-            ],
-            "description": "Common Container Interface (PHP FIG PSR-11)",
-            "homepage": "https://github.com/php-fig/container",
-            "keywords": [
+        "reference": "b7ce3b176482dbbc1245ebf52b181af44c2cf55f",
+        "shasum": ""
+      },
+      "require": {
+        "php": ">=5.3.0"
+      },
+      "type": "library",
+      "extra": {
+        "branch-alias": {
+          "dev-master": "1.0.x-dev"
+        }
+      },
+      "autoload": {
+        "psr-4": {
+          "Psr\\Container\\": "src/"
+        }
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "MIT"
+      ],
+      "authors": [
+        {
+          "name": "PHP-FIG",
+          "homepage": "http://www.php-fig.org/"
+        }
+      ],
+      "description": "Common Container Interface (PHP FIG PSR-11)",
+      "homepage": "https://github.com/php-fig/container",
+      "keywords": [
                 "PSR-11",
                 "container",
                 "container-interface",
@@ -5867,36 +5944,36 @@
         "dist": {
           "type": "zip",
           "url": "https://api.github.com/repos/barryvdh/laravel-ide-helper/zipball/affa55122f83575888d4ebf1728992686e8223de",
-                "reference": "affa55122f83575888d4ebf1728992686e8223de",
-                "shasum": ""
-            },
-            "require": {
-                "barryvdh/reflection-docblock": "^2.0.6",
-                "composer/composer": "^1.6 || ^2.0@dev",
-                "doctrine/dbal": "~2.3",
-                "ext-json": "*",
-                "illuminate/console": "^6 || ^7 || ^8",
-                "illuminate/filesystem": "^6 || ^7 || ^8",
-                "illuminate/support": "^6 || ^7 || ^8",
-                "php": ">=7.2",
-                "phpdocumentor/type-resolver": "^1.1.0"
-            },
-            "require-dev": {
-                "friendsofphp/php-cs-fixer": "^2",
-                "illuminate/config": "^6 || ^7 || ^8",
-                "illuminate/view": "^6 || ^7 || ^8",
-                "mockery/mockery": "^1.3",
-                "orchestra/testbench": "^4 || ^5 || ^6",
-                "phpunit/phpunit": "^8.5 || ^9",
-                "spatie/phpunit-snapshot-assertions": "^1.4 || ^2.2 || ^3",
-                "vimeo/psalm": "^3.12"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.8-dev"
-                },
-                "laravel": {
+          "reference": "affa55122f83575888d4ebf1728992686e8223de",
+          "shasum": ""
+        },
+        "require": {
+          "barryvdh/reflection-docblock": "^2.0.6",
+          "composer/composer": "^1.6 || ^2.0@dev",
+          "doctrine/dbal": "~2.3",
+          "ext-json": "*",
+          "illuminate/console": "^6 || ^7 || ^8",
+          "illuminate/filesystem": "^6 || ^7 || ^8",
+          "illuminate/support": "^6 || ^7 || ^8",
+          "php": ">=7.2",
+          "phpdocumentor/type-resolver": "^1.1.0"
+        },
+        "require-dev": {
+          "friendsofphp/php-cs-fixer": "^2",
+          "illuminate/config": "^6 || ^7 || ^8",
+          "illuminate/view": "^6 || ^7 || ^8",
+          "mockery/mockery": "^1.3",
+          "orchestra/testbench": "^4 || ^5 || ^6",
+          "phpunit/phpunit": "^8.5 || ^9",
+          "spatie/phpunit-snapshot-assertions": "^1.4 || ^2.2 || ^3",
+          "vimeo/psalm": "^3.12"
+        },
+        "type": "library",
+        "extra": {
+          "branch-alias": {
+            "dev-master": "2.8-dev"
+          },
+          "laravel": {
                     "providers": [
                         "Barryvdh\\LaravelIdeHelper\\IdeHelperServiceProvider"
                     ]
