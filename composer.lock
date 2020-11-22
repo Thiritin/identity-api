@@ -4,7 +4,7 @@
     "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
     "This file is @generated automatically"
   ],
-  "content-hash": "4555072981940bf6b0525ff08f4c0d84",
+  "content-hash": "af4e7e6cabfabb1c817486f63ffd54ab",
   "packages": [
     {
       "name": "asm89/stack-cors",
@@ -61,6 +61,73 @@
         "source": "https://github.com/asm89/stack-cors/tree/v2.0.2"
       },
       "time": "2020-10-29T16:03:21+00:00"
+    },
+    {
+      "name": "backpack/backupmanager",
+      "version": "v3.0.2",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/Laravel-Backpack/BackupManager.git",
+        "reference": "7e8dc4d32238befd7fe78d28c1ddb9e49779f17c"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/Laravel-Backpack/BackupManager/zipball/7e8dc4d32238befd7fe78d28c1ddb9e49779f17c",
+        "reference": "7e8dc4d32238befd7fe78d28c1ddb9e49779f17c",
+        "shasum": ""
+      },
+      "require": {
+        "backpack/crud": "^4.1.0",
+        "spatie/laravel-backup": "^6.1"
+      },
+      "require-dev": {
+        "phpunit/phpunit": "^9.0||^7.0",
+        "scrutinizer/ocular": "~1.1"
+      },
+      "type": "library",
+      "extra": {
+        "branch-alias": {
+          "dev-master": "1.0-dev"
+        },
+        "laravel": {
+          "providers": [
+            "Backpack\\BackupManager\\BackupManagerServiceProvider"
+          ]
+        }
+      },
+      "autoload": {
+        "psr-4": {
+          "Backpack\\BackupManager\\": "src"
+        }
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "proprietary"
+      ],
+      "authors": [
+        {
+          "name": "Cristian Tabacitu",
+          "email": "hello@tabacitu.ro",
+          "homepage": "http://tabacitu.ro",
+          "role": "Chief Architect & Web Developer"
+        }
+      ],
+      "description": "Admin interface for managing backups in Backpack, on Laravel 5.2+",
+      "homepage": "https://github.com/laravel-backpack/BackupManager",
+      "keywords": [
+        "backpack",
+        "backup",
+        "backupmanager",
+        "dick",
+        "laravel",
+        "tabacitu",
+        "updivision"
+      ],
+      "support": {
+        "issues": "https://github.com/Laravel-Backpack/BackupManager/issues",
+        "source": "https://github.com/Laravel-Backpack/BackupManager/tree/v3.0.2"
+      },
+      "time": "2020-09-24T18:44:06+00:00"
     },
     {
       "name": "backpack/crud",
@@ -151,6 +218,70 @@
       "time": "2020-11-08T12:56:14+00:00"
     },
     {
+      "name": "backpack/logmanager",
+      "version": "v4.0.2",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/Laravel-Backpack/LogManager.git",
+        "reference": "1ddc98de9f0f9aa9a3a0d338af547052e1aae522"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/Laravel-Backpack/LogManager/zipball/1ddc98de9f0f9aa9a3a0d338af547052e1aae522",
+        "reference": "1ddc98de9f0f9aa9a3a0d338af547052e1aae522",
+        "shasum": ""
+      },
+      "require": {
+        "backpack/crud": "^4.1.0"
+      },
+      "require-dev": {
+        "phpunit/phpunit": "^9.0||^7.0",
+        "scrutinizer/ocular": "~1.1"
+      },
+      "type": "library",
+      "extra": {
+        "branch-alias": {
+          "dev-master": "1.0-dev"
+        },
+        "laravel": {
+          "providers": [
+            "Backpack\\LogManager\\LogManagerServiceProvider"
+          ]
+        }
+      },
+      "autoload": {
+        "psr-4": {
+          "Backpack\\LogManager\\": "src"
+        }
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "proprietary"
+      ],
+      "authors": [
+        {
+          "name": "Cristian Tabacitu",
+          "email": "hello@tabacitu.ro",
+          "homepage": "http://tabacitu.ro",
+          "role": "Developer"
+        }
+      ],
+      "description": "An interface to preview, download and delete Laravel log files.",
+      "homepage": "https://github.com/laravel-backpack/LogManager",
+      "keywords": [
+        "backpack",
+        "laravel",
+        "log interface",
+        "log manager",
+        "logs"
+      ],
+      "support": {
+        "issues": "https://github.com/Laravel-Backpack/LogManager/issues",
+        "source": "https://github.com/Laravel-Backpack/LogManager/tree/v4.0.2"
+      },
+      "time": "2020-09-24T18:42:18+00:00"
+    },
+    {
       "name": "backpack/permissionmanager",
       "version": "6.0.4",
       "source": {
@@ -226,6 +357,74 @@
         "source": "https://github.com/Laravel-Backpack/PermissionManager/tree/6.0.4"
       },
       "time": "2020-10-27T14:34:29+00:00"
+    },
+    {
+      "name": "backpack/settings",
+      "version": "3.0.7",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/Laravel-Backpack/Settings.git",
+        "reference": "1e004daf818f62c10c64de422a6380e28bc38f06"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/Laravel-Backpack/Settings/zipball/1e004daf818f62c10c64de422a6380e28bc38f06",
+        "reference": "1e004daf818f62c10c64de422a6380e28bc38f06",
+        "shasum": ""
+      },
+      "require": {
+        "backpack/crud": "^4.1.0|^4.0.0"
+      },
+      "require-dev": {
+        "phpunit/phpunit": "^9.0||^7.0",
+        "scrutinizer/ocular": "~1.1"
+      },
+      "type": "library",
+      "extra": {
+        "branch-alias": {
+          "dev-master": "1.0-dev"
+        },
+        "laravel": {
+          "providers": [
+            "Backpack\\Settings\\SettingsServiceProvider"
+          ]
+        }
+      },
+      "autoload": {
+        "psr-4": {
+          "Backpack\\Settings\\": "src"
+        }
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "proprietary"
+      ],
+      "authors": [
+        {
+          "name": "Cristian Tabacitu",
+          "email": "hello@tabacitu.ro",
+          "homepage": "http://www.tabacitu.ro",
+          "role": "Chief Architect & Lead Developer"
+        }
+      ],
+      "description": "Application settings interface for Laravel 5 using Backpack CRUD.",
+      "homepage": "https://github.com/laravel-backpack/settings",
+      "keywords": [
+        "backpack",
+        "backpack settings",
+        "dick",
+        "dick settings",
+        "laravel backpack",
+        "manage settings",
+        "settings admin",
+        "tabacitu",
+        "updivision"
+      ],
+      "support": {
+        "issues": "https://github.com/Laravel-Backpack/Settings/issues",
+        "source": "https://github.com/Laravel-Backpack/Settings/tree/3.0.7"
+      },
+      "time": "2020-04-24T14:33:48+00:00"
     },
     {
       "name": "brick/math",
@@ -802,16 +1001,16 @@
       ],
       "authors": [
         {
-                    "name": "Guilherme Blanco",
-                    "email": "guilhermeblanco@gmail.com"
-                },
-                {
-                    "name": "Roman Borschel",
-                    "email": "roman@code-factory.org"
-                },
-                {
-                    "name": "Benjamin Eberlei",
-                    "email": "kontakt@beberlei.de"
+          "name": "Guilherme Blanco",
+          "email": "guilhermeblanco@gmail.com"
+        },
+        {
+          "name": "Roman Borschel",
+          "email": "roman@code-factory.org"
+        },
+        {
+          "name": "Benjamin Eberlei",
+          "email": "kontakt@beberlei.de"
                 },
                 {
                     "name": "Jonathan Wage",
@@ -2510,16 +2709,16 @@
       "description": "Common Container Interface (PHP FIG PSR-11)",
       "homepage": "https://github.com/php-fig/container",
       "keywords": [
-                "PSR-11",
-                "container",
-                "container-interface",
-                "container-interop",
-                "psr"
-            ],
-            "support": {
-                "issues": "https://github.com/php-fig/container/issues",
-                "source": "https://github.com/php-fig/container/tree/master"
-            },
+        "PSR-11",
+        "container",
+        "container-interface",
+        "container-interop",
+        "psr"
+      ],
+      "support": {
+        "issues": "https://github.com/php-fig/container/issues",
+        "source": "https://github.com/php-fig/container/tree/master"
+      },
             "time": "2017-02-14T16:28:37+00:00"
         },
         {
@@ -3055,25 +3254,85 @@
                 "rss": "https://github.com/ramsey/uuid/releases.atom",
                 "source": "https://github.com/ramsey/uuid"
             },
-            "funding": [
-                {
-                    "url": "https://github.com/ramsey",
-                    "type": "github"
-                }
-            ],
-            "time": "2020-08-18T17:17:46+00:00"
+          "funding": [
+            {
+              "url": "https://github.com/ramsey",
+              "type": "github"
+            }
+          ],
+          "time": "2020-08-18T17:17:46+00:00"
         },
+    {
+      "name": "spatie/db-dumper",
+      "version": "2.18.0",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/spatie/db-dumper.git",
+        "reference": "eddb2b7c6877817d97bbdc1c60d1a800bf5a267a"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/spatie/db-dumper/zipball/eddb2b7c6877817d97bbdc1c60d1a800bf5a267a",
+        "reference": "eddb2b7c6877817d97bbdc1c60d1a800bf5a267a",
+        "shasum": ""
+      },
+      "require": {
+        "php": "^7.2|^8.0",
+        "symfony/process": "^4.2|^5.0"
+      },
+      "require-dev": {
+        "phpunit/phpunit": "^7.0|^8.0|^9.0"
+      },
+      "type": "library",
+      "autoload": {
+        "psr-4": {
+          "Spatie\\DbDumper\\": "src"
+        }
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "MIT"
+      ],
+      "authors": [
         {
-            "name": "spatie/enum",
-            "version": "3.5.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spatie/enum.git",
-                "reference": "ead64c904c122b7fa8cc9a76744453843754f7b4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spatie/enum/zipball/ead64c904c122b7fa8cc9a76744453843754f7b4",
+          "name": "Freek Van der Herten",
+          "email": "freek@spatie.be",
+          "homepage": "https://spatie.be",
+          "role": "Developer"
+        }
+      ],
+      "description": "Dump databases",
+      "homepage": "https://github.com/spatie/db-dumper",
+      "keywords": [
+        "database",
+        "db-dumper",
+        "dump",
+        "mysqldump",
+        "spatie"
+      ],
+      "support": {
+        "issues": "https://github.com/spatie/db-dumper/issues",
+        "source": "https://github.com/spatie/db-dumper/tree/2.18.0"
+      },
+      "funding": [
+        {
+          "url": "https://github.com/spatie",
+          "type": "github"
+        }
+      ],
+      "time": "2020-11-10T09:20:18+00:00"
+    },
+    {
+      "name": "spatie/enum",
+      "version": "3.5.0",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/spatie/enum.git",
+        "reference": "ead64c904c122b7fa8cc9a76744453843754f7b4"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/spatie/enum/zipball/ead64c904c122b7fa8cc9a76744453843754f7b4",
                 "reference": "ead64c904c122b7fa8cc9a76744453843754f7b4",
                 "shasum": ""
             },
@@ -3220,26 +3479,116 @@
             "funding": [
                 {
                     "url": "https://spatie.be/open-source/support-us",
-                    "type": "custom"
+                  "type": "custom"
                 },
-                {
-                    "url": "https://github.com/spatie",
-                    "type": "github"
-                }
+              {
+                "url": "https://github.com/spatie",
+                "type": "github"
+              }
             ],
-            "time": "2020-11-03T11:34:26+00:00"
+          "time": "2020-11-03T11:34:26+00:00"
+        },
+    {
+      "name": "spatie/laravel-backup",
+      "version": "6.12.0",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/spatie/laravel-backup.git",
+        "reference": "0690862ae2c64e1a2f03fa9990925313696db71d"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/spatie/laravel-backup/zipball/0690862ae2c64e1a2f03fa9990925313696db71d",
+        "reference": "0690862ae2c64e1a2f03fa9990925313696db71d",
+        "shasum": ""
+      },
+      "require": {
+        "illuminate/console": "^5.8.15|^6.0|^7.0|^8.0",
+        "illuminate/contracts": "^5.8.15|^6.0|^7.0|^8.0",
+        "illuminate/events": "^5.8.15|^6.0|^7.0|^8.0",
+        "illuminate/filesystem": "^5.8.15|^6.0|^7.0|^8.0",
+        "illuminate/notifications": "^5.8.15|^6.0|^7.0|^8.0",
+        "illuminate/support": "^5.8.15|^6.0|^7.0|^8.0",
+        "league/flysystem": "^1.0.49",
+        "php": "^7.3",
+        "spatie/db-dumper": "^2.12",
+        "spatie/temporary-directory": "^1.1",
+        "symfony/finder": "^4.2|^5.0"
+      },
+      "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.16",
+        "laravel/slack-notification-channel": "^1.0",
+        "league/flysystem-aws-s3-v3": "^1.0",
+        "mockery/mockery": "^1.3",
+        "orchestra/testbench": "3.8.*|4.*|5.*|6.*",
+        "phpunit/phpunit": "^8.4|^9.0"
+      },
+      "suggest": {
+        "laravel/slack-notification-channel": "Required for sending notifications via Slack"
+      },
+      "type": "library",
+      "extra": {
+        "laravel": {
+          "providers": [
+            "Spatie\\Backup\\BackupServiceProvider"
+          ]
+        }
+      },
+      "autoload": {
+        "psr-4": {
+          "Spatie\\Backup\\": "src"
+        },
+        "files": [
+          "src/Helpers/functions.php"
+        ]
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "MIT"
+      ],
+      "authors": [
+        {
+          "name": "Freek Van der Herten",
+          "email": "freek@spatie.be",
+          "homepage": "https://spatie.be",
+          "role": "Developer"
+        }
+      ],
+      "description": "A Laravel package to backup your application",
+      "homepage": "https://github.com/spatie/laravel-backup",
+      "keywords": [
+        "backup",
+        "database",
+        "laravel-backup",
+        "spatie"
+      ],
+      "support": {
+        "issues": "https://github.com/spatie/laravel-backup/issues",
+        "source": "https://github.com/spatie/laravel-backup/tree/6.12.0"
+      },
+      "funding": [
+        {
+          "url": "https://github.com/sponsors/spatie",
+          "type": "github"
         },
         {
-            "name": "spatie/laravel-permission",
-            "version": "3.17.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spatie/laravel-permission.git",
-                "reference": "35d40a45e49f5713f477823b571e05ef6a3a0394"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-permission/zipball/35d40a45e49f5713f477823b571e05ef6a3a0394",
+          "url": "https://spatie.be/open-source/support-us",
+          "type": "other"
+        }
+      ],
+      "time": "2020-11-19T14:35:13+00:00"
+    },
+    {
+      "name": "spatie/laravel-permission",
+      "version": "3.17.0",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/spatie/laravel-permission.git",
+        "reference": "35d40a45e49f5713f477823b571e05ef6a3a0394"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/spatie/laravel-permission/zipball/35d40a45e49f5713f477823b571e05ef6a3a0394",
                 "reference": "35d40a45e49f5713f477823b571e05ef6a3a0394",
                 "shasum": ""
             },
@@ -3369,25 +3718,76 @@
                 "issues": "https://github.com/spatie/laravel-query-builder/issues",
                 "source": "https://github.com/spatie/laravel-query-builder"
             },
-            "funding": [
-                {
-                    "url": "https://spatie.be/open-source/support-us",
-                    "type": "custom"
-                }
-            ],
-            "time": "2020-10-27T16:14:34+00:00"
+          "funding": [
+            {
+              "url": "https://spatie.be/open-source/support-us",
+              "type": "custom"
+            }
+          ],
+          "time": "2020-10-27T16:14:34+00:00"
         },
+    {
+      "name": "spatie/temporary-directory",
+      "version": "1.3.0",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/spatie/temporary-directory.git",
+        "reference": "f517729b3793bca58f847c5fd383ec16f03ffec6"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/spatie/temporary-directory/zipball/f517729b3793bca58f847c5fd383ec16f03ffec6",
+        "reference": "f517729b3793bca58f847c5fd383ec16f03ffec6",
+        "shasum": ""
+      },
+      "require": {
+        "php": "^7.2|^8.0"
+      },
+      "require-dev": {
+        "phpunit/phpunit": "^8.0|^9.0"
+      },
+      "type": "library",
+      "autoload": {
+        "psr-4": {
+          "Spatie\\TemporaryDirectory\\": "src"
+        }
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "MIT"
+      ],
+      "authors": [
         {
-            "name": "swiftmailer/swiftmailer",
-            "version": "v6.2.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "149cfdf118b169f7840bbe3ef0d4bc795d1780c9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/149cfdf118b169f7840bbe3ef0d4bc795d1780c9",
+          "name": "Alex Vanderbist",
+          "email": "alex@spatie.be",
+          "homepage": "https://spatie.be",
+          "role": "Developer"
+        }
+      ],
+      "description": "Easily create, use and destroy temporary directories",
+      "homepage": "https://github.com/spatie/temporary-directory",
+      "keywords": [
+        "php",
+        "spatie",
+        "temporary-directory"
+      ],
+      "support": {
+        "issues": "https://github.com/spatie/temporary-directory/issues",
+        "source": "https://github.com/spatie/temporary-directory/tree/1.3.0"
+      },
+      "time": "2020-11-09T15:54:21+00:00"
+    },
+    {
+      "name": "swiftmailer/swiftmailer",
+      "version": "v6.2.3",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/swiftmailer/swiftmailer.git",
+        "reference": "149cfdf118b169f7840bbe3ef0d4bc795d1780c9"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/149cfdf118b169f7840bbe3ef0d4bc795d1780c9",
                 "reference": "149cfdf118b169f7840bbe3ef0d4bc795d1780c9",
                 "shasum": ""
             },
@@ -5974,16 +6374,16 @@
             "dev-master": "2.8-dev"
           },
           "laravel": {
-                    "providers": [
-                        "Barryvdh\\LaravelIdeHelper\\IdeHelperServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Barryvdh\\LaravelIdeHelper\\": "src"
-                }
-            },
+            "providers": [
+              "Barryvdh\\LaravelIdeHelper\\IdeHelperServiceProvider"
+            ]
+          }
+        },
+        "autoload": {
+          "psr-4": {
+            "Barryvdh\\LaravelIdeHelper\\": "src"
+          }
+        },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
