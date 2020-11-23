@@ -3,10 +3,10 @@ FROM php:7.4-fpm-alpine
 WORKDIR /app
 
 RUN apk add --no-cache --virtual .build-deps curl-dev imagemagick-dev libtool libxml2-dev sqlite-dev autoconf gcc make g++ zlib-dev libpng-dev
-RUN apk add --no-cache curl imagemagick libzip-dev libintl icu icu-dev oniguruma-dev git openssh-client bash
+RUN apk add --no-cache curl imagemagick libzip-dev libintl icu icu-dev oniguruma-dev git openssh-client bash postgresql-client postgresql-dev
 RUN pecl install imagick
 RUN docker-php-ext-enable imagick
-RUN docker-php-ext-install exif bcmath curl iconv mbstring pdo pdo_mysql pcntl tokenizer xml zip intl gd
+RUN docker-php-ext-install exif bcmath curl iconv mbstring pdo pdo_pgsql pdo_sqlite pcntl tokenizer xml zip intl gd
 RUN pecl install redis && docker-php-ext-enable redis
 
 # Composer
