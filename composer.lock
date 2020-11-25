@@ -4,7 +4,7 @@
     "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
     "This file is @generated automatically"
   ],
-  "content-hash": "af4e7e6cabfabb1c817486f63ffd54ab",
+  "content-hash": "ab5a06beeedf8d6cf11088db3ebf51ab",
   "packages": [
     {
       "name": "asm89/stack-cors",
@@ -280,83 +280,6 @@
         "source": "https://github.com/Laravel-Backpack/LogManager/tree/v4.0.2"
       },
       "time": "2020-09-24T18:42:18+00:00"
-    },
-    {
-      "name": "backpack/permissionmanager",
-      "version": "6.0.4",
-      "source": {
-        "type": "git",
-        "url": "https://github.com/Laravel-Backpack/PermissionManager.git",
-        "reference": "a21231b4ca1bce0199e778aea21109043f4c6728"
-      },
-      "dist": {
-        "type": "zip",
-        "url": "https://api.github.com/repos/Laravel-Backpack/PermissionManager/zipball/a21231b4ca1bce0199e778aea21109043f4c6728",
-        "reference": "a21231b4ca1bce0199e778aea21109043f4c6728",
-        "shasum": ""
-      },
-      "require": {
-        "backpack/crud": "^4.1.0",
-        "spatie/laravel-permission": "^3.0"
-      },
-      "require-dev": {
-        "phpunit/phpunit": "^9.0||^7.0",
-        "scrutinizer/ocular": "~1.1"
-      },
-      "type": "library",
-      "extra": {
-        "branch-alias": {
-          "dev-master": "1.0-dev"
-        },
-        "laravel": {
-          "providers": [
-            "Backpack\\PermissionManager\\PermissionManagerServiceProvider"
-          ]
-        }
-      },
-      "autoload": {
-        "psr-4": {
-          "Backpack\\PermissionManager\\": "src"
-        }
-      },
-      "notification-url": "https://packagist.org/downloads/",
-      "license": [
-        "proprietary"
-      ],
-      "authors": [
-        {
-          "name": "Marius Constantin",
-          "email": "marius@updivision.com",
-          "homepage": "http://www.updivision.com",
-          "role": "Lead Developer"
-        },
-        {
-          "name": "Cristian Tabacitu",
-          "email": "hello@tabacitu.ro",
-          "homepage": "http://www.tabacitu.ro",
-          "role": "Chief Architect"
-        }
-      ],
-      "description": "Users and permissions management interface for Laravel 5 using Backpack CRUD.",
-      "homepage": "https://github.com/laravel-backpack/permissionmanager",
-      "keywords": [
-        "backpack",
-        "backpack permission",
-        "backpack roles",
-        "backpack user management",
-        "laravel backpack",
-        "manage permission",
-        "manage roles",
-        "manage users",
-        "tabacitu",
-        "updivision",
-        "users roles admin"
-      ],
-      "support": {
-        "issues": "https://github.com/Laravel-Backpack/PermissionManager/issues",
-        "source": "https://github.com/Laravel-Backpack/PermissionManager/tree/6.0.4"
-      },
-      "time": "2020-10-27T14:34:29+00:00"
     },
     {
       "name": "backpack/settings",
@@ -1011,16 +934,16 @@
         {
           "name": "Benjamin Eberlei",
           "email": "kontakt@beberlei.de"
-                },
-                {
-                    "name": "Jonathan Wage",
-                    "email": "jonwage@gmail.com"
-                },
-                {
-                    "name": "Johannes Schmitt",
-                    "email": "schmittjoh@gmail.com"
-                }
-            ],
+        },
+        {
+          "name": "Jonathan Wage",
+          "email": "jonwage@gmail.com"
+        },
+        {
+          "name": "Johannes Schmitt",
+          "email": "schmittjoh@gmail.com"
+        }
+      ],
             "description": "PHP Doctrine Inflector is a small library that can perform string manipulations with regard to upper/lowercase and singular/plural forms of words.",
             "homepage": "https://www.doctrine-project.org/projects/inflector.html",
             "keywords": [
@@ -2719,16 +2642,16 @@
         "issues": "https://github.com/php-fig/container/issues",
         "source": "https://github.com/php-fig/container/tree/master"
       },
-            "time": "2017-02-14T16:28:37+00:00"
-        },
-        {
-            "name": "psr/event-dispatcher",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/php-fig/event-dispatcher.git",
-                "reference": "dbefd12671e8a14ec7f180cab83036ed26714bb0"
-            },
+      "time": "2017-02-14T16:28:37+00:00"
+    },
+    {
+      "name": "psr/event-dispatcher",
+      "version": "1.0.0",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/php-fig/event-dispatcher.git",
+        "reference": "dbefd12671e8a14ec7f180cab83036ed26714bb0"
+      },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/php-fig/event-dispatcher/zipball/dbefd12671e8a14ec7f180cab83036ed26714bb0",
@@ -3244,16 +3167,16 @@
             ],
             "description": "A PHP library for generating and working with universally unique identifiers (UUIDs).",
             "homepage": "https://github.com/ramsey/uuid",
-            "keywords": [
-                "guid",
-                "identifier",
-                "uuid"
-            ],
-            "support": {
-                "issues": "https://github.com/ramsey/uuid/issues",
-                "rss": "https://github.com/ramsey/uuid/releases.atom",
-                "source": "https://github.com/ramsey/uuid"
-            },
+          "keywords": [
+            "guid",
+            "identifier",
+            "uuid"
+          ],
+          "support": {
+            "issues": "https://github.com/ramsey/uuid/issues",
+            "rss": "https://github.com/ramsey/uuid/releases.atom",
+            "source": "https://github.com/ramsey/uuid"
+          },
           "funding": [
             {
               "url": "https://github.com/ramsey",
@@ -3324,26 +3247,26 @@
     },
     {
       "name": "spatie/enum",
-      "version": "3.5.0",
+      "version": "3.5.1",
       "source": {
         "type": "git",
         "url": "https://github.com/spatie/enum.git",
-        "reference": "ead64c904c122b7fa8cc9a76744453843754f7b4"
+        "reference": "9c14cee8ef02832596219ba29495e38f5f533839"
       },
       "dist": {
         "type": "zip",
-        "url": "https://api.github.com/repos/spatie/enum/zipball/ead64c904c122b7fa8cc9a76744453843754f7b4",
-                "reference": "ead64c904c122b7fa8cc9a76744453843754f7b4",
-                "shasum": ""
-            },
-            "require": {
-                "ext-json": "*",
-                "php": "^7.4 || ^8.0"
-            },
-            "require-dev": {
-                "fzaninotto/faker": "^1.9.1",
-                "larapack/dd": "^1.1",
-                "phpunit/phpunit": "^9.0",
+        "url": "https://api.github.com/repos/spatie/enum/zipball/9c14cee8ef02832596219ba29495e38f5f533839",
+        "reference": "9c14cee8ef02832596219ba29495e38f5f533839",
+        "shasum": ""
+      },
+      "require": {
+        "ext-json": "*",
+        "php": "^7.4 || ^8.0"
+      },
+      "require-dev": {
+        "fzaninotto/faker": "^1.9.1",
+        "larapack/dd": "^1.1",
+        "phpunit/phpunit": "^9.0",
                 "vimeo/psalm": "^3.12"
             },
             "suggest": {
@@ -3396,7 +3319,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-10-22T10:08:21+00:00"
+      "time": "2020-11-19T12:37:21+00:00"
         },
         {
             "name": "spatie/laravel-activitylog",
@@ -3477,10 +3400,10 @@
                 "source": "https://github.com/spatie/laravel-activitylog/tree/3.16.1"
             },
             "funding": [
-                {
-                    "url": "https://spatie.be/open-source/support-us",
-                  "type": "custom"
-                },
+              {
+                "url": "https://spatie.be/open-source/support-us",
+                "type": "custom"
+              },
               {
                 "url": "https://github.com/spatie",
                 "type": "github"
@@ -3589,16 +3512,16 @@
       "dist": {
         "type": "zip",
         "url": "https://api.github.com/repos/spatie/laravel-permission/zipball/35d40a45e49f5713f477823b571e05ef6a3a0394",
-                "reference": "35d40a45e49f5713f477823b571e05ef6a3a0394",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/auth": "^5.8|^6.0|^7.0|^8.0",
-                "illuminate/container": "^5.8|^6.0|^7.0|^8.0",
-                "illuminate/contracts": "^5.8|^6.0|^7.0|^8.0",
-                "illuminate/database": "^5.8|^6.0|^7.0|^8.0",
-                "php": "^7.2.5"
-            },
+        "reference": "35d40a45e49f5713f477823b571e05ef6a3a0394",
+        "shasum": ""
+      },
+      "require": {
+        "illuminate/auth": "^5.8|^6.0|^7.0|^8.0",
+        "illuminate/container": "^5.8|^6.0|^7.0|^8.0",
+        "illuminate/contracts": "^5.8|^6.0|^7.0|^8.0",
+        "illuminate/database": "^5.8|^6.0|^7.0|^8.0",
+        "php": "^7.2.5"
+      },
             "require-dev": {
                 "orchestra/testbench": "^3.8|^4.0|^5.0|^6.0",
                 "phpunit/phpunit": "^8.0|^9.0",
@@ -3708,16 +3631,16 @@
                     "role": "Developer"
                 }
             ],
-            "description": "Easily build Eloquent queries from API requests",
-            "homepage": "https://github.com/spatie/laravel-query-builder",
-            "keywords": [
-                "laravel-query-builder",
-                "spatie"
-            ],
-            "support": {
-                "issues": "https://github.com/spatie/laravel-query-builder/issues",
-                "source": "https://github.com/spatie/laravel-query-builder"
-            },
+          "description": "Easily build Eloquent queries from API requests",
+          "homepage": "https://github.com/spatie/laravel-query-builder",
+          "keywords": [
+            "laravel-query-builder",
+            "spatie"
+          ],
+          "support": {
+            "issues": "https://github.com/spatie/laravel-query-builder/issues",
+            "source": "https://github.com/spatie/laravel-query-builder"
+          },
           "funding": [
             {
               "url": "https://spatie.be/open-source/support-us",
@@ -3788,16 +3711,16 @@
       "dist": {
         "type": "zip",
         "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/149cfdf118b169f7840bbe3ef0d4bc795d1780c9",
-                "reference": "149cfdf118b169f7840bbe3ef0d4bc795d1780c9",
-                "shasum": ""
-            },
-            "require": {
-                "egulias/email-validator": "~2.0",
-                "php": ">=7.0.0",
-                "symfony/polyfill-iconv": "^1.0",
-                "symfony/polyfill-intl-idn": "^1.10",
-                "symfony/polyfill-mbstring": "^1.0"
-            },
+        "reference": "149cfdf118b169f7840bbe3ef0d4bc795d1780c9",
+        "shasum": ""
+      },
+      "require": {
+        "egulias/email-validator": "~2.0",
+        "php": ">=7.0.0",
+        "symfony/polyfill-iconv": "^1.0",
+        "symfony/polyfill-intl-idn": "^1.10",
+        "symfony/polyfill-mbstring": "^1.0"
+      },
             "require-dev": {
                 "mockery/mockery": "~0.9.1",
                 "symfony/phpunit-bridge": "^3.4.19|^4.1.8"
@@ -6384,16 +6307,16 @@
             "Barryvdh\\LaravelIdeHelper\\": "src"
           }
         },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Barry vd. Heuvel",
-                    "email": "barryvdh@gmail.com"
-                }
-            ],
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+          "MIT"
+        ],
+        "authors": [
+          {
+            "name": "Barry vd. Heuvel",
+            "email": "barryvdh@gmail.com"
+          }
+        ],
             "description": "Laravel IDE Helper, generates correct PHPDocs for all Facade classes, to improve auto-completion.",
             "keywords": [
                 "autocomplete",

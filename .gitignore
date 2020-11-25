@@ -21,3 +21,4 @@ public/mix-manifest.json
 /draft.yml
 /.blueprint
 /public/packages/
+/.npmrc
