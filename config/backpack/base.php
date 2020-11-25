@@ -22,8 +22,8 @@ return [
     */
 
     // Date & Datetime Format Syntax: https://carbon.nesbot.com/docs/#api-localization
-    'default_date_format' => 'dd.mm.YYYY',
-    'default_datetime_format' => 'dd.mm.YYYY, HH:mm',
+    'default_date_format' => 'DD.MM.YYYY',
+    'default_datetime_format' => 'DD.MM.YYYY, HH:mm',
 
     // Direction, according to language
     // (left-to-right vs right-to-left)
@@ -65,7 +65,7 @@ return [
         // 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic',
 
         // Example (load font-awesome instead of line-awesome):
-        // 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css',
+        'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css',
     ],
 
     // CSS files that are loaded in all pages, using Laravel's mix() helper
@@ -107,7 +107,7 @@ return [
     // ------
 
     // Footer element classes.
-    'footer_class' => 'app-footer d-print-none',
+    'footer_class' => 'app-footer d-none',
     // hide it with d-none
     // change background color with bg-dark, bg-primary, bg-secondary, bg-danger, bg-warning, bg-success, bg-info, bg-blue, bg-light-blue, bg-indigo, bg-purple, bg-pink, bg-red, bg-orange, bg-yellow, bg-green, bg-teal, bg-cyan, bg-white
 
@@ -115,7 +115,7 @@ return [
     'developer_name' => '',
 
     // Developer website. Link in footer. Type false if you want to hide it.
-    'developer_link' => '',
+    'developer_link' => false,
 
     // Show powered by Laravel Backpack in the footer? true/false
     'show_powered_by' => false,
@@ -183,7 +183,9 @@ return [
 
     // The prefix used in all base routes (the 'admin' in admin/dashboard)
     // You can make sure all your URLs use this prefix by using the backpack_url() helper instead of url()
-    'route_prefix' => 'admin',
+    'route_prefix' => '',
+
+    'route_domain' => env('ROUTE_DOMAIN_ADMIN'),
 
     // The web middleware (group) used in all base & CRUD routes
     // If you've modified your "web" middleware group (ex: removed sessions), you can use a different
@@ -222,9 +224,9 @@ return [
     */
 
     // Fully qualified namespace of the User model
-    'user_model_fqn' => config('auth.providers.users.model'),
+    // 'user_model_fqn' => config('auth.providers.users.model'),
     // 'user_model_fqn' => App\User::class, // works on Laravel <= 7
-    // 'user_model_fqn' => App\Models\User::class, // works on Laravel >= 8
+    'user_model_fqn' => App\Models\User::class, // works on Laravel >= 8
 
     // The classes for the middleware to check if the visitor is an admin
     // Can be a single class or an array of classes
@@ -257,7 +259,7 @@ return [
     // Other options:
     // - placehold (generic image with his first letter)
     // - example_method_name (specify the method on the User model that returns the URL)
-    'avatar_type' => 'gravatar',
+    'avatar_type' => 'placehold',
 
     /*
     |--------------------------------------------------------------------------
