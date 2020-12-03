@@ -9,6 +9,7 @@
 
 namespace App\Models;
 
+use App\Enums\GroupTypeEnum;
 use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Carbon\Carbon;
 use Eloquent;
@@ -42,23 +43,22 @@ use Jamesh\Uuid\HasUuid;
 class Group extends Model
 {
     use CrudTrait;
-    use HasFactory, HasUuid;
+    use HasFactory;
+    use HasUuid;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
     protected $fillable = [
         'name',
         'type',
         'logo',
     ];
 
+    protected $casts = [
+        'type' => GroupTypeEnum::class,
+        'nullable_enum' => GroupTypeEnum::class.':nullable',
+        'array_of_enums' => GroupTypeEnum::class.':collection',
+        'nullable_array_of_enums' => GroupTypeEnum::class.':collection,nullable',
+    ];
 
-    /**
-     * @return BelongsToMany
-     */
     public function users()
     {
         return $this->belongsToMany(User::class)
