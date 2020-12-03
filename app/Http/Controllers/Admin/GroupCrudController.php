@@ -9,6 +9,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Enums\GroupTypeEnum;
 use App\Http\Requests\GroupRequest;
 use App\Models\Group;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
@@ -87,9 +88,36 @@ class GroupCrudController extends CrudController
     {
         CRUD::setValidation(GroupRequest::class);
 
-        CRUD::field('name');
-        CRUD::field('type');
-        CRUD::field('logo');
+        $this->crud->addFields([
+            [
+                'name' => 'logo',
+                'type' => 'image',
+                'label' => __('logo'),
+                'crop' => true,
+                'aspect_ratio' => 1,
+            ],
+            [
+                'name' => 'type',
+                'type' => 'select_from_array',
+                'label' => __('grouptype'),
+                'options' => [
+                    'none' => GroupTypeEnum::none(),
+                    'department' => GroupTypeEnum::department()
+                ],
+                'allows_null' => false,
+                'default' => 'none',
+            ],
+            [
+                'name' => 'name',
+                'type' => 'text',
+                'label' => __('name'),
+            ],
+            [
+                'name' => 'description',
+                'type' => 'wysiwyg',
+                'label' => __('description'),
+            ],
+        ]);
 
         /**
          * Fields can be defined using the fluent syntax or array syntax:

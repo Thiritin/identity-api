@@ -26,9 +26,10 @@ class CreateGroupsTable extends Migration
             'groups',
             function (Blueprint $table) {
                 $table->uuid('id')->primary();
+                $table->string('type')->default('none');
                 $table->string('name');
-                $table->string('type')->nullable();
-                $table->text('logo')->nullable();
+                $table->text('description')->nullable();
+                $table->string('logo',255)->nullable();
                 $table->timestamps();
             }
         );
