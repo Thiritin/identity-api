@@ -2,7 +2,7 @@
 /*
  * Eurofurence Identity Provider Authentication Backend
  *
- * @copyright	Copyright (c) 2020 Martin Becker (https://martin-becker.ovh)
+ * @copyright	Copyright (c) 2021 Martin Becker (https://martin-becker.ovh)
  * @license		GNU AGPLv3 (GNU Affero General Public License v3.0)
  * @link		https://github.com/Thiritin/ef-idp
  */
@@ -25,8 +25,8 @@ class CreateGroupUserTable extends Migration
         Schema::create(
             'group_user',
             function (Blueprint $table) {
-                $table->foreignUuid('group_id')->constrained()->cascadeOnDelete();
-                $table->foreignUuid('user_id')->constrained()->cascadeOnDelete();
+                $table->foreignId('group_id')->constrained()->cascadeOnDelete();
+                $table->foreignId('user_id')->constrained()->cascadeOnDelete();
                 $table->string('title')->nullable();
                 $table->tinyInteger("authorization_level", false, true)->default(1)->comment(
                     '0 => Guest, 1 => Member, 2 => Administrator'

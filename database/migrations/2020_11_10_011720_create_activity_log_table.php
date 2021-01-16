@@ -2,7 +2,7 @@
 /*
  * Eurofurence Identity Provider Authentication Backend
  *
- * @copyright	Copyright (c) 2020 Martin Becker (https://martin-becker.ovh)
+ * @copyright	Copyright (c) 2021 Martin Becker (https://martin-becker.ovh)
  * @license		GNU AGPLv3 (GNU Affero General Public License v3.0)
  * @link		https://github.com/Thiritin/ef-idp
  */
@@ -21,11 +21,11 @@ class CreateActivityLogTable extends Migration
         Schema::connection(config('activitylog.database_connection'))->create(
             config('activitylog.table_name'),
             function (Blueprint $table) {
-                $table->bigIncrements('id');
+                $table->id();
                 $table->string('log_name')->nullable();
                 $table->text('description');
-                $table->nullableUuidMorphs('subject', 'subject');
-                $table->nullableUuidMorphs('causer', 'causer');
+                $table->nullableMorphs('subject', 'subject');
+                $table->nullableMorphs('causer', 'causer');
                 $table->json('properties')->nullable();
                 $table->timestamps();
                 $table->index('log_name');

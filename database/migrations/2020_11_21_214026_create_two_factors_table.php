@@ -2,7 +2,7 @@
 /*
  * Eurofurence Identity Provider Authentication Backend
  *
- * @copyright	Copyright (c) 2020 Martin Becker (https://martin-becker.ovh)
+ * @copyright	Copyright (c) 2021 Martin Becker (https://martin-becker.ovh)
  * @license		GNU AGPLv3 (GNU Affero General Public License v3.0)
  * @link		https://github.com/Thiritin/ef-idp
  */
@@ -25,8 +25,8 @@ class CreateTwoFactorsTable extends Migration
         Schema::create(
             'two_factors',
             function (Blueprint $table) {
-                $table->uuid('id')->primary();
-                $table->foreignUuid('user_id')->references('id')->on('users')->onDelete('cascade');
+                $table->id();
+                $table->foreignId('user_id')->references('id')->on('users')->onDelete('cascade');
                 $table->string('secret')->nullable()->unique();
                 $table->string('type');
                 $table->timestamps();

@@ -2,7 +2,7 @@
 /*
  * Eurofurence Identity Provider Authentication Backend
  *
- * @copyright	Copyright (c) 2020 Martin Becker (https://martin-becker.ovh)
+ * @copyright	Copyright (c) 2021 Martin Becker (https://martin-becker.ovh)
  * @license		GNU AGPLv3 (GNU Affero General Public License v3.0)
  * @link		https://github.com/Thiritin/ef-idp
  */
@@ -23,7 +23,7 @@ class CreateUsersTable extends Migration
         Schema::create(
             'users',
             function (Blueprint $table) {
-                $table->uuid('id')->primary();
+                $table->id();
                 $table->string('name');
                 $table->string('email')->unique();
                 $table->timestamp('email_verified_at')->nullable();

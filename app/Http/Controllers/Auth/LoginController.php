@@ -2,7 +2,7 @@
 /*
  * Eurofurence Identity Provider Authentication Backend
  *
- * @copyright	Copyright (c) 2020 Martin Becker (https://martin-becker.ovh)
+ * @copyright	Copyright (c) 2021 Martin Becker (https://martin-becker.ovh)
  * @license		GNU AGPLv3 (GNU Affero General Public License v3.0)
  * @link		https://github.com/Thiritin/ef-idp
  */
@@ -34,7 +34,8 @@ class LoginController extends Controller
                 \Illuminate\Http\Response::HTTP_UNPROCESSABLE_ENTITY
             );
         }
-        $hydraResponse = $hydra->acceptLoginRequest(Auth::id(), $request->get('login_challenge'));
+        $hydraResponse = $hydra->acceptLoginRequest(Auth::user()->getHashId(), $request->get('login_challenge'));
+        abort_if(empty($hydraResponse->redirect_to), 500);
         return new LoginResource($hydraResponse->redirect_to);
     }
 }

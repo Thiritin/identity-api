@@ -2,7 +2,7 @@
 /*
  * Eurofurence Identity Provider Authentication Backend
  *
- * @copyright	Copyright (c) 2020 Martin Becker (https://martin-becker.ovh)
+ * @copyright	Copyright (c) 2021 Martin Becker (https://martin-becker.ovh)
  * @license		GNU AGPLv3 (GNU Affero General Public License v3.0)
  * @link		https://github.com/Thiritin/ef-idp
  */
@@ -25,7 +25,7 @@ class CreateGroupsTable extends Migration
         Schema::create(
             'groups',
             function (Blueprint $table) {
-                $table->uuid('id')->primary();
+                $table->id();
                 $table->string('type')->default('none');
                 $table->string('name');
                 $table->text('description')->nullable();

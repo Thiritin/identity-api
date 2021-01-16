@@ -2,7 +2,7 @@
 /*
  * Eurofurence Identity Provider Authentication Backend
  *
- * @copyright	Copyright (c) 2020 Martin Becker (https://martin-becker.ovh)
+ * @copyright	Copyright (c) 2021 Martin Becker (https://martin-becker.ovh)
  * @license		GNU AGPLv3 (GNU Affero General Public License v3.0)
  * @link		https://github.com/Thiritin/ef-idp
  */
@@ -12,6 +12,7 @@ namespace App\Services;
 
 use Exception;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
+use Illuminate\Support\Facades\Log;
 use Ory\Hydra\Client\Api\AdminApi;
 use Ory\Hydra\Client\Configuration;
 use Ory\Hydra\Client\Model\AcceptConsentRequest;
@@ -39,7 +40,7 @@ class Hydra
         }
     }
 
-    public function acceptLoginRequest(int $userId, string $loginChallenge): array
+    public function acceptLoginRequest(string $userId, string $loginChallenge)
     {
         try {
             return json_decode(
@@ -56,6 +57,7 @@ class Hydra
             if ($e->getCode() === 404) {
                 throw new ModelNotFoundException("The requested Resource does not exist.");
             }
+            Log::error($e->getMessage());
             throw $e;
         }
     }
