@@ -1,5 +1,5 @@
 ARG ENV=develop
-FROM php:rc-fpm-alpine3.12
+FROM php:7.4-fpm-alpine
 WORKDIR /app
 
 RUN apk add --no-cache --virtual .build-deps curl-dev imagemagick-dev libtool libxml2-dev sqlite-dev autoconf gcc make g++ zlib-dev libpng-dev

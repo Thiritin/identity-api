@@ -2,7 +2,7 @@
 /*
  * Eurofurence Identity Provider Authentication Backend
  *
- * @copyright	Copyright (c) 2020 Martin Becker (https://martin-becker.ovh)
+ * @copyright	Copyright (c) 2021 Martin Becker (https://martin-becker.ovh)
  * @license		GNU AGPLv3 (GNU Affero General Public License v3.0)
  * @link		https://github.com/Thiritin/ef-idp
  */
@@ -18,12 +18,12 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Jamesh\Uuid\HasUuid;
 use Spatie\Activitylog\Models\Activity;
 use Spatie\Activitylog\Traits\LogsActivity;
 use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\Traits\HasRoles;
+use Vinkla\Hashids\Facades\Hashids;
 
 /**
  * App\Models\User
@@ -63,13 +63,8 @@ use Spatie\Permission\Traits\HasRoles;
  */
 class User extends Authenticatable
 {
-    use HasFactory, HasUuid, HasRoles, LogsActivity, CrudTrait;
+    use HasFactory, HasRoles, LogsActivity, CrudTrait;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
     protected $fillable = [
         'name',
         'email',
@@ -78,30 +73,16 @@ class User extends Authenticatable
         'password',
     ];
 
-    /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var array
-     */
     protected $hidden = [
         'password',
         'remember_token',
     ];
 
-    /**
-     * The attributes that should be mutated to dates.
-     *
-     * @var array
-     */
     protected $dates = [
         'email_verified_at',
     ];
 
-
-    /**
-     * @return BelongsToMany
-     */
-    public function groups()
+    public function groups(): BelongsToMany
     {
         return $this->belongsToMany(Group::class)
             ->using('App\Models\RoleUser')
@@ -114,11 +95,13 @@ class User extends Authenticatable
             );
     }
 
-    /**
-     * @return HasMany
-     */
-    public function twoFactors()
+    public function twoFactors(): HasMany
     {
         return $this->hasMany(TwoFactor::class);
+    }
+
+    public function getHashId(): string
+    {
+        return Hashids::encode($this->id);
     }
 }
