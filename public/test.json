@@ -1,0 +1,17 @@
+*   Trying 172.21.0.6:4445...
+* Connected to hydra (172.21.0.6) port 4445 (#0)
+> PUT /oauth2/auth/requests/login/accept?login_challenge=6c2284a1da90423186fbc70be50a04ec HTTP/1.1
+Host: hydra: 4445
+User-Agent: OpenAPI-Generator/1.0.0/PHP
+Accept: application/json
+Content-Type: application/json
+Content-Length: 13
+
+* upload completely sent off: 13 out of 13 bytes
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 400 Bad Request
+< Content-Type: application/json
+< Date: Sat, 16 Jan 2021 20: 54: 59 GMT
+< Content-Length: 213
+<
+* Connection #0 to host hydra left intact
