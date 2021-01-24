@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 /**
- * App\Models\TwoFactor
+ * App\Models\TwoFactor.
  *
  * @property string $id
  * @property string $user_id
@@ -44,7 +44,6 @@ class TwoFactor extends Model
         'secret',
         'type',
     ];
-
 
     /**
      * @return BelongsTo

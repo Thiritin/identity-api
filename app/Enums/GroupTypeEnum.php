@@ -15,6 +15,7 @@ class GroupTypeEnum extends \Spatie\Enum\Laravel\Enum
             'department' => 'department',
         ];
     }
+
     protected static function labels(): array
     {
         return [

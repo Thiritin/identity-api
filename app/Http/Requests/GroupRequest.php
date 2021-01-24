@@ -31,7 +31,7 @@ class GroupRequest extends FormRequest
             'name' => 'required|min:5|max:255',
             'type' => new EnumRule(GroupTypeEnum::class),
             'description' => 'nullable',
-            'logo' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:10240'
+            'logo' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:10240',
         ];
     }
 
