@@ -7,8 +7,7 @@ use Illuminate\Support\Facades\Route;
 /**
  * Prefix: /auth/
  * Namespace: Auth
- * Name: Auth
+ * Name: Auth.
  */
-
 Route::post('login', LoginController::class);
 Route::get('consent', ConsentController::class);

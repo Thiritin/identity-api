@@ -15,8 +15,7 @@ use Backpack\CRUD\app\Library\CrudPanel\CrudPanel;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 
 /**
- * Class GroupCrudController
- * @package App\Http\Controllers\Admin
+ * Class GroupCrudController.
  * @property-read CrudPanel $crud
  */
 class GroupCrudController extends CrudController
@@ -56,7 +55,7 @@ class GroupCrudController extends CrudController
         /**
          * Columns can be defined using the fluent syntax or array syntax:
          * - CRUD::column('price')->type('number');
-         * - CRUD::addColumn(['name' => 'price', 'type' => 'number']);
+         * - CRUD::addColumn(['name' => 'price', 'type' => 'number']);.
          */
     }
 
@@ -95,7 +94,7 @@ class GroupCrudController extends CrudController
                 'label' => __('grouptype'),
                 'options' => [
                     'none' => GroupTypeEnum::none(),
-                    'department' => GroupTypeEnum::department()
+                    'department' => GroupTypeEnum::department(),
                 ],
                 'allows_null' => false,
                 'default' => 'none',
@@ -115,7 +114,7 @@ class GroupCrudController extends CrudController
         /**
          * Fields can be defined using the fluent syntax or array syntax:
          * - CRUD::field('price')->type('number');
-         * - CRUD::addField(['name' => 'price', 'type' => 'number']));
+         * - CRUD::addField(['name' => 'price', 'type' => 'number']));.
          */
     }
 }
