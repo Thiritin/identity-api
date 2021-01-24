@@ -23,8 +23,8 @@ use Backpack\CRUD\app\Library\CrudPanel\CrudPanel;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 
 /**
- * Class UserCrudController
- * @package App\Http\Controllers\Admin
+ * Class UserCrudController.
+ *
  * @property-read CrudPanel $crud
  */
 class UserCrudController extends CrudController
@@ -55,23 +55,23 @@ class UserCrudController extends CrudController
         // example logic
         $this->crud->addColumns([
             [
-                'name' => 'name',
+                'name'  => 'name',
                 'label' => __('username'),
-                'type' => 'text',
+                'type'  => 'text',
             ],
             [
-                'name' => 'email',
+                'name'  => 'email',
                 'label' => __('email'),
-                'type' => 'email',
+                'type'  => 'email',
             ],
             [
                 // n-n relationship (with pivot table)
-                'label' => __('roles'), // Table column heading
-                'type' => 'select_multiple',
-                'name' => 'roles', // the method that defines the relationship in your Model
-                'entity' => 'roles', // the method that defines the relationship in your Model
+                'label'     => __('roles'), // Table column heading
+                'type'      => 'select_multiple',
+                'name'      => 'roles', // the method that defines the relationship in your Model
+                'entity'    => 'roles', // the method that defines the relationship in your Model
                 'attribute' => 'name', // foreign key attribute that is shown to user
-                'model' => 'App\Models\Role', // foreign key model
+                'model'     => 'App\Models\Role', // foreign key model
             ],
         ]);
     }
@@ -80,44 +80,45 @@ class UserCrudController extends CrudController
      * Define what happens when the List operation is loaded.
      *
      * @see  https://backpackforlaravel.com/docs/crud-operation-list-entries
+     *
      * @return void
      */
     protected function setupListOperation()
     {
         $this->crud->addColumn([
-            'type' => 'checkbox',
-            'name' => 'bulk_actions',
-            'label' => ' <input type="checkbox" class="crud_bulk_actions_main_checkbox" style="width: 16px; height: 16px;" />',
-            'priority' => 1,
-            'searchLogic' => false,
-            'orderable' => false,
+            'type'           => 'checkbox',
+            'name'           => 'bulk_actions',
+            'label'          => ' <input type="checkbox" class="crud_bulk_actions_main_checkbox" style="width: 16px; height: 16px;" />',
+            'priority'       => 1,
+            'searchLogic'    => false,
+            'orderable'      => false,
             'visibleInModal' => false,
         ])->makeFirstColumn();
 
         $this->crud->addColumn([
-            'name' => 'name',
+            'name'  => 'name',
             'label' => __('username'),
-            'type' => 'text',
+            'type'  => 'text',
         ]);
         $this->crud->addColumn([
-            'name' => 'email',
+            'name'  => 'email',
             'label' => __('email'),
-            'type' => 'email',
+            'type'  => 'email',
         ]);
         $this->crud->addColumn([
-            'name' => 'roles',
+            'name'  => 'roles',
             'label' => __('roles'),
-            'type' => 'relationship',
+            'type'  => 'relationship',
         ]);
         $this->crud->addColumn([
-            'name' => 'created_at',
+            'name'  => 'created_at',
             'label' => __('created_at'),
-            'type' => 'date',
+            'type'  => 'date',
         ]);
         $this->crud->addFilter(
             [
-                'name' => 'role',
-                'type' => 'dropdown',
+                'name'  => 'role',
+                'type'  => 'dropdown',
                 'label' => __('roles'),
             ],
             Role::all()->pluck('name', 'id')->toArray(),
@@ -133,6 +134,7 @@ class UserCrudController extends CrudController
      * Define what happens when the Update operation is loaded.
      *
      * @see https://backpackforlaravel.com/docs/crud-operation-update
+     *
      * @return void
      */
     protected function setupUpdateOperation()
@@ -144,6 +146,7 @@ class UserCrudController extends CrudController
      * Define what happens when the Create operation is loaded.
      *
      * @see https://backpackforlaravel.com/docs/crud-operation-create
+     *
      * @return void
      */
     protected function setupCreateOperation()
@@ -153,29 +156,29 @@ class UserCrudController extends CrudController
         $this->crud->addFields([
             [
                 'label' => __('username'),
-                'type' => 'text',
-                'name' => 'name',
+                'type'  => 'text',
+                'name'  => 'name',
             ],
             [
                 'label' => __('email'),
-                'type' => 'email',
-                'name' => 'email',
+                'type'  => 'email',
+                'name'  => 'email',
             ],
             [
-                'label' => __('roles'),
-                'type' => 'checklist',
-                'name' => 'roles',
-                'entity' => 'roles',
-                'model' => Role::class, // foreign key model
+                'label'     => __('roles'),
+                'type'      => 'checklist',
+                'name'      => 'roles',
+                'entity'    => 'roles',
+                'model'     => Role::class, // foreign key model
                 'attribute' => 'name', // foreign key attribute that is shown to user
-                'pivot' => true,
+                'pivot'     => true,
             ],
         ]);
 
         /**
          * Fields can be defined using the fluent syntax or array syntax:
          * - CRUD::field('price')->type('number');
-         * - CRUD::addField(['name' => 'price', 'type' => 'number']));
+         * - CRUD::addField(['name' => 'price', 'type' => 'number']));.
          */
     }
 }

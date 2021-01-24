@@ -10,7 +10,6 @@
 namespace App\Http\Requests;
 
 use App\Enums\GroupTypeEnum;
-use App\Http\Requests\Request;
 use Illuminate\Foundation\Http\FormRequest;
 use Spatie\Enum\Laravel\Rules\EnumRule;
 
@@ -35,10 +34,10 @@ class GroupRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|min:5|max:255',
-            'type' => new EnumRule(GroupTypeEnum::class),
+            'name'        => 'required|min:5|max:255',
+            'type'        => new EnumRule(GroupTypeEnum::class),
             'description' => 'nullable',
-            'logo' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:10240'
+            'logo'        => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:10240',
         ];
     }
 

@@ -36,7 +36,6 @@ return [
     */
     'namespace' => 'App',
 
-
     /*
     |--------------------------------------------------------------------------
     | Component Namespaces
@@ -48,9 +47,8 @@ return [
     | your own custom namespace when generating these components.
     |
     */
-    'models_namespace' => 'Models',
+    'models_namespace'      => 'Models',
     'controllers_namespace' => 'Http\\Controllers',
-
 
     /*
     |--------------------------------------------------------------------------
@@ -150,20 +148,20 @@ return [
     |
     */
     'generators' => [
-        'controller' => ControllerGenerator::class,
-        'factory' => \Blueprint\Generators\FactoryGenerator::class,
-        'migration' => MigrationGenerator::class,
-        'model' => ModelGenerator::class,
-        'route' => RouteGenerator::class,
-        'seeder' => SeederGenerator::class,
-        'test' => TestGenerator::class,
-        'event' => EventGenerator::class,
+        'controller'   => ControllerGenerator::class,
+        'factory'      => \Blueprint\Generators\FactoryGenerator::class,
+        'migration'    => MigrationGenerator::class,
+        'model'        => ModelGenerator::class,
+        'route'        => RouteGenerator::class,
+        'seeder'       => SeederGenerator::class,
+        'test'         => TestGenerator::class,
+        'event'        => EventGenerator::class,
         'form_request' => FormRequestGenerator::class,
-        'job' => JobGenerator::class,
-        'mail' => MailGenerator::class,
+        'job'          => JobGenerator::class,
+        'mail'         => MailGenerator::class,
         'notification' => NotificationGenerator::class,
-        'resource' => ResourceGenerator::class,
-        'view' => ViewGenerator::class,
+        'resource'     => ResourceGenerator::class,
+        'view'         => ViewGenerator::class,
     ],
 
 ];

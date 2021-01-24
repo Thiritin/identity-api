@@ -22,8 +22,8 @@ use Backpack\CRUD\app\Library\CrudPanel\CrudPanel;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 
 /**
- * Class GroupCrudController
- * @package App\Http\Controllers\Admin
+ * Class GroupCrudController.
+ *
  * @property-read CrudPanel $crud
  */
 class GroupCrudController extends CrudController
@@ -50,6 +50,7 @@ class GroupCrudController extends CrudController
      * Define what happens when the List operation is loaded.
      *
      * @see  https://backpackforlaravel.com/docs/crud-operation-list-entries
+     *
      * @return void
      */
     protected function setupListOperation()
@@ -63,7 +64,7 @@ class GroupCrudController extends CrudController
         /**
          * Columns can be defined using the fluent syntax or array syntax:
          * - CRUD::column('price')->type('number');
-         * - CRUD::addColumn(['name' => 'price', 'type' => 'number']);
+         * - CRUD::addColumn(['name' => 'price', 'type' => 'number']);.
          */
     }
 
@@ -71,6 +72,7 @@ class GroupCrudController extends CrudController
      * Define what happens when the Update operation is loaded.
      *
      * @see https://backpackforlaravel.com/docs/crud-operation-update
+     *
      * @return void
      */
     protected function setupUpdateOperation()
@@ -82,6 +84,7 @@ class GroupCrudController extends CrudController
      * Define what happens when the Create operation is loaded.
      *
      * @see https://backpackforlaravel.com/docs/crud-operation-create
+     *
      * @return void
      */
     protected function setupCreateOperation()
@@ -90,31 +93,31 @@ class GroupCrudController extends CrudController
 
         $this->crud->addFields([
             [
-                'name' => 'logo',
-                'type' => 'image',
-                'label' => __('logo'),
-                'crop' => true,
+                'name'         => 'logo',
+                'type'         => 'image',
+                'label'        => __('logo'),
+                'crop'         => true,
                 'aspect_ratio' => 1,
             ],
             [
-                'name' => 'type',
-                'type' => 'select_from_array',
-                'label' => __('grouptype'),
+                'name'    => 'type',
+                'type'    => 'select_from_array',
+                'label'   => __('grouptype'),
                 'options' => [
-                    'none' => GroupTypeEnum::none(),
-                    'department' => GroupTypeEnum::department()
+                    'none'       => GroupTypeEnum::none(),
+                    'department' => GroupTypeEnum::department(),
                 ],
                 'allows_null' => false,
-                'default' => 'none',
+                'default'     => 'none',
             ],
             [
-                'name' => 'name',
-                'type' => 'text',
+                'name'  => 'name',
+                'type'  => 'text',
                 'label' => __('name'),
             ],
             [
-                'name' => 'description',
-                'type' => 'wysiwyg',
+                'name'  => 'description',
+                'type'  => 'wysiwyg',
                 'label' => __('description'),
             ],
         ]);
@@ -122,7 +125,7 @@ class GroupCrudController extends CrudController
         /**
          * Fields can be defined using the fluent syntax or array syntax:
          * - CRUD::field('price')->type('number');
-         * - CRUD::addField(['name' => 'price', 'type' => 'number']));
+         * - CRUD::addField(['name' => 'price', 'type' => 'number']));.
          */
     }
 }

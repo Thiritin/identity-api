@@ -26,7 +26,7 @@ use Spatie\Permission\Traits\HasRoles;
 use Vinkla\Hashids\Facades\Hashids;
 
 /**
- * App\Models\User
+ * App\Models\User.
  *
  * @property string $id
  * @property string $name
@@ -45,6 +45,7 @@ use Vinkla\Hashids\Facades\Hashids;
  * @property-read int|null $roles_count
  * @property-read Collection|TwoFactor[] $twoFactors
  * @property-read int|null $two_factors_count
+ *
  * @method static Builder|User newModelQuery()
  * @method static Builder|User newQuery()
  * @method static Builder|User permission($permissions)
@@ -63,7 +64,10 @@ use Vinkla\Hashids\Facades\Hashids;
  */
 class User extends Authenticatable
 {
-    use HasFactory, HasRoles, LogsActivity, CrudTrait;
+    use HasFactory;
+    use HasRoles;
+    use LogsActivity;
+    use CrudTrait;
 
     protected $fillable = [
         'name',

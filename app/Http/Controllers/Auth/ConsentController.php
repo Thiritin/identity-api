@@ -19,6 +19,7 @@ class ConsentController extends Controller
     {
         $hydra = new Hydra();
         $response = $hydra->acceptConsentRequest($request->get('consent_challenge'));
+
         return redirect(json_decode($response, 1)['redirect_to']);
     }
 }

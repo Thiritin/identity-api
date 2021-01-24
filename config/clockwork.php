@@ -240,7 +240,7 @@ return [
     'storage_files_compress' => env('CLOCKWORK_STORAGE_FILES_COMPRESS', false),
 
     'storage_sql_database' => env('CLOCKWORK_STORAGE_SQL_DATABASE', storage_path('clockwork.sqlite')),
-    'storage_sql_table' => env('CLOCKWORK_STORAGE_SQL_TABLE', 'clockwork'),
+    'storage_sql_table'    => env('CLOCKWORK_STORAGE_SQL_TABLE', 'clockwork'),
 
     /*
     |--------------------------------------------------------------------------
@@ -292,7 +292,7 @@ return [
     ],
 
     'filter_methods' => [
-        'options' // mostly used in the csrf pre-flight requests and is rarely of interest
+        'options', // mostly used in the csrf pre-flight requests and is rarely of interest
     ],
 
     /*

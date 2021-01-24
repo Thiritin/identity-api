@@ -22,7 +22,7 @@ return [
     */
 
     // Date & Datetime Format Syntax: https://carbon.nesbot.com/docs/#api-localization
-    'default_date_format' => 'DD.MM.YYYY',
+    'default_date_format'     => 'DD.MM.YYYY',
     'default_datetime_format' => 'DD.MM.YYYY, HH:mm',
 
     // Direction, according to language
@@ -243,7 +243,7 @@ return [
     // Username column for authentication
     // The Backpack default is the same as the Laravel default (email)
     // If you need to switch to username, you also need to create that column in your db
-    'authentication_column' => 'email',
+    'authentication_column'      => 'email',
     'authentication_column_name' => 'Email',
 
     // The guard that protects the Backpack admin panel.

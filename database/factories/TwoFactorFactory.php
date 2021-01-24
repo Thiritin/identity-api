@@ -31,8 +31,8 @@ class TwoFactorFactory extends Factory
     {
         return [
             'user_id' => User::factory(),
-            'secret' => $this->faker->word,
-            'type' => $this->faker->word,
+            'secret'  => $this->faker->word,
+            'type'    => $this->faker->word,
         ];
     }
 }

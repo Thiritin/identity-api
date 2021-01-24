@@ -18,14 +18,15 @@ class GroupTypeEnum extends \Spatie\Enum\Laravel\Enum
     protected static function values(): array
     {
         return [
-            'none' => null,
+            'none'       => null,
             'department' => 'department',
         ];
     }
+
     protected static function labels(): array
     {
         return [
-            'none' => __('none'),
+            'none'       => __('none'),
             'department' => __('department'),
         ];
     }

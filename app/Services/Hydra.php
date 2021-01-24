@@ -9,7 +9,6 @@
 
 namespace App\Services;
 
-
 use Exception;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Support\Facades\Log;
@@ -22,7 +21,7 @@ class Hydra
 {
     private AdminApi $api;
 
-    public function __construct($host = "hydra:4445")
+    public function __construct($host = 'hydra:4445')
     {
         $configuration = (new Configuration())->setHost('hydra:4445');
         $this->api = new AdminApi(null, $configuration);
@@ -34,8 +33,9 @@ class Hydra
             return $this->api->getLoginRequest($loginChallenge);
         } catch (Exception $e) {
             if ($e->getCode() === 404) {
-                throw new ModelNotFoundException("The requested Resource does not exist.");
+                throw new ModelNotFoundException('The requested Resource does not exist.');
             }
+
             return $e;
         }
     }
@@ -55,9 +55,10 @@ class Hydra
             );
         } catch (Exception $e) {
             if ($e->getCode() === 404) {
-                throw new ModelNotFoundException("The requested Resource does not exist.");
+                throw new ModelNotFoundException('The requested Resource does not exist.');
             }
             Log::error($e->getMessage());
+
             throw $e;
         }
     }
@@ -68,8 +69,9 @@ class Hydra
             return $this->api->acceptConsentRequest($consentChallenge, new AcceptConsentRequest());
         } catch (Exception $e) {
             if ($e->getCode() === 404) {
-                throw new ModelNotFoundException("The requested Resource does not exist.");
+                throw new ModelNotFoundException('The requested Resource does not exist.');
             }
+
             throw $e;
         }
     }

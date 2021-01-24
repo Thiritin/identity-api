@@ -19,7 +19,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * App\Models\Group
+ * App\Models\Group.
  *
  * @property string $id
  * @property string $name
@@ -28,6 +28,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property Carbon $updated_at
  * @property-read Collection|User[] $users
  * @property-read int|null $users_count
+ *
  * @method static Builder|Group newModelQuery()
  * @method static Builder|Group newQuery()
  * @method static Builder|Group query()
@@ -50,9 +51,9 @@ class Group extends Model
     ];
 
     protected $casts = [
-        'type' => GroupTypeEnum::class,
-        'nullable_enum' => GroupTypeEnum::class.':nullable',
-        'array_of_enums' => GroupTypeEnum::class.':collection',
+        'type'                    => GroupTypeEnum::class,
+        'nullable_enum'           => GroupTypeEnum::class.':nullable',
+        'array_of_enums'          => GroupTypeEnum::class.':collection',
         'nullable_array_of_enums' => GroupTypeEnum::class.':collection,nullable',
     ];
 

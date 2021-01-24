@@ -17,7 +17,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 /**
- * App\Models\TwoFactor
+ * App\Models\TwoFactor.
  *
  * @property string $id
  * @property string $user_id
@@ -26,6 +26,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @property Carbon $created_at
  * @property Carbon $updated_at
  * @property-read User $user
+ *
  * @method static Builder|TwoFactor newModelQuery()
  * @method static Builder|TwoFactor newQuery()
  * @method static Builder|TwoFactor query()
@@ -51,7 +52,6 @@ class TwoFactor extends Model
         'secret',
         'type',
     ];
-
 
     /**
      * @return BelongsTo

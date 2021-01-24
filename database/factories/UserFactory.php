@@ -29,12 +29,12 @@ class UserFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->name,
-            'email' => $this->faker->safeEmail,
+            'name'              => $this->faker->name,
+            'email'             => $this->faker->safeEmail,
             'email_verified_at' => $this->faker->dateTime(),
-            'avatar' => $this->faker->text,
-            'password' => $this->faker->password,
-            'remember_token' => $this->faker->word,
+            'avatar'            => $this->faker->text,
+            'password'          => $this->faker->password,
+            'remember_token'    => $this->faker->word,
         ];
     }
 }
