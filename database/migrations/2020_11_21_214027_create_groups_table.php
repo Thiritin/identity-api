@@ -22,7 +22,7 @@ class CreateGroupsTable extends Migration
                 $table->string('type')->default('none');
                 $table->string('name');
                 $table->text('description')->nullable();
-                $table->string('logo',255)->nullable();
+                $table->string('logo', 255)->nullable();
                 $table->timestamps();
             }
         );
