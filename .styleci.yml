@@ -4,7 +4,6 @@ disabled:
 enabled:
   - phpdoc_annotation_without_dot
   - no_superfluous_phpdoc_tags
-  - trailing_comma_in_multiline_array
 finder:
   not-name:
     - "index.php"
