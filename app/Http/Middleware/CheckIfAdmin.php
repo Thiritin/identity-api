@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use App\Models\User;
 use Closure;
 use Illuminate\Http\Request;
 
@@ -61,9 +62,9 @@ class CheckIfAdmin
      *
      * @return bool [description]
      */
-    private function checkIfUserIsAdmin($user)
+    private function checkIfUserIsAdmin(User $user)
     {
-        // return ($user->is_admin == 1);
         return true;
+        return ($user->hasRole('Administrator') === true);
     }
 }
