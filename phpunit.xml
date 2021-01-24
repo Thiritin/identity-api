@@ -2,9 +2,9 @@
 <!--
   ~ Eurofurence Identity Provider Authentication Backend
   ~
-  ~ @copyright	Copyright (c) 2020 Martin Becker (https://martin-becker.ovh)
+  ~ @copyright	Copyright (c) 2021 Thiritin <me@thiritin.com>
   ~ @license		GNU AGPLv3 (GNU Affero General Public License v3.0)
-  ~ @link		https://github.com/Thiritin/ef-idp
+  ~ @link		https://github.com/Thiritin/identity-api
   -->
 
 <phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
