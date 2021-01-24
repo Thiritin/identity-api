@@ -54,7 +54,7 @@ return [
 
     'url' => env('APP_URL', 'http://localhost'),
 
-    'api_domain' => env('ROUTER_API_DOMAIN', 'api.eurofurence.local'),
+    'api_domain' => env('ROUTER_API_DOMAIN', 'api.identity.eurofurence.local'),
 
     'asset_url' => env('ASSET_URL', null),
 
