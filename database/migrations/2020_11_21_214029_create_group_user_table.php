@@ -21,7 +21,7 @@ class CreateGroupUserTable extends Migration
                 $table->foreignId('group_id')->constrained()->cascadeOnDelete();
                 $table->foreignId('user_id')->constrained()->cascadeOnDelete();
                 $table->string('title')->nullable();
-                $table->tinyInteger("authorization_level", false, true)->default(1)->comment(
+                $table->tinyInteger('authorization_level', false, true)->default(1)->comment(
                     '0 => Guest, 1 => Member, 2 => Administrator'
                 );
                 $table->boolean('is_director')->default('0');
