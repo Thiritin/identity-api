@@ -1,20 +1,4 @@
 <?php
-/*
- * Eurofurence Identity Provider Authentication Backend
- *
- * @copyright	Copyright (c) 2021 Martin Becker (https://martin-becker.ovh)
- * @license		GNU AGPLv3 (GNU Affero General Public License v3.0)
- * @link		https://github.com/Thiritin/ef-idp
- */
-
-/**
- * Copyright (c) Vincent Klaiber.
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- *
- * @see https://github.com/vinkla/laravel-hashids
- */
 
 return [
 

@@ -1,11 +1,4 @@
 <?php
-/*
- * Eurofurence Identity Provider Authentication Backend
- *
- * @copyright	Copyright (c) 2020 Martin Becker (https://martin-becker.ovh)
- * @license		GNU AGPLv3 (GNU Affero General Public License v3.0)
- * @link		https://github.com/Thiritin/ef-idp
- */
 
 namespace App\Console;
 
@@ -31,8 +24,8 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command('backup:clean')->daily()->at('04:00');
-        $schedule->command('backup:run')->daily()->at('05:00');
+        // $schedule->command('backup:clean')->daily()->at('04:00');
+        // $schedule->command('backup:run')->daily()->at('05:00');
     }
 
     /**
