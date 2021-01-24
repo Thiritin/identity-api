@@ -2,12 +2,9 @@ vendor
 .idea
 .docker
 .git
-tests
 .editorconfig
 .env.example
-.env.testing.example
 .gitattributes
 .gitignore
-docker-compose.yml
 Makefile
 README.md
