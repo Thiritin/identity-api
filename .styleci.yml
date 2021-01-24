@@ -2,7 +2,6 @@ preset: laravel
 disabled:
   - no_unused_imports
 enabled:
-  - phpdoc_annotation_without_dot
   - no_superfluous_phpdoc_tags
 finder:
   not-name:
