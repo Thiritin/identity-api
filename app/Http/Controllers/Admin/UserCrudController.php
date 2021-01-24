@@ -16,8 +16,7 @@ use Backpack\CRUD\app\Library\CrudPanel\CrudPanel;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 
 /**
- * Class UserCrudController
- * @package App\Http\Controllers\Admin
+ * Class UserCrudController.
  * @property-read CrudPanel $crud
  */
 class UserCrudController extends CrudController
@@ -168,7 +167,7 @@ class UserCrudController extends CrudController
         /**
          * Fields can be defined using the fluent syntax or array syntax:
          * - CRUD::field('price')->type('number');
-         * - CRUD::addField(['name' => 'price', 'type' => 'number']));
+         * - CRUD::addField(['name' => 'price', 'type' => 'number']));.
          */
     }
 }

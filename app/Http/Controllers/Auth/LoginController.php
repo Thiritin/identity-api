@@ -19,7 +19,7 @@ class LoginController extends Controller
             'email' => $request->get('email'),
             'password' => $request->get('password'),
         ];
-        if (!Auth::attempt($loginData)) {
+        if (! Auth::attempt($loginData)) {
             return Response::json(
                 [
                     'message' => 'Authentication failed.',
@@ -29,6 +29,7 @@ class LoginController extends Controller
         }
         $hydraResponse = $hydra->acceptLoginRequest(Auth::user()->getHashId(), $request->get('login_challenge'));
         abort_if(empty($hydraResponse->redirect_to), 500);
+
         return new LoginResource($hydraResponse->redirect_to);
     }
 }

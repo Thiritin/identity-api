@@ -19,7 +19,7 @@ use Spatie\Permission\Traits\HasRoles;
 use Vinkla\Hashids\Facades\Hashids;
 
 /**
- * App\Models\User
+ * App\Models\User.
  *
  * @property string $id
  * @property string $name

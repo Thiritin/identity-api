@@ -285,7 +285,7 @@ return [
     ],
 
     'filter_methods' => [
-        'options' // mostly used in the csrf pre-flight requests and is rarely of interest
+        'options', // mostly used in the csrf pre-flight requests and is rarely of interest
     ],
 
     /*
