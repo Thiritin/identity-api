@@ -58,7 +58,11 @@ class Hydra
     public function acceptConsentRequest(string $consentChallenge)
     {
         try {
-            return $this->api->acceptConsentRequest($consentChallenge, new AcceptConsentRequest());
+            return $this->api->acceptConsentRequest($consentChallenge, new AcceptConsentRequest([
+                "grantScope" => ["openid", "offline_access"],
+                "remember" => "true",
+                "rememberFor" => "0"
+            ]));
         } catch (Exception $e) {
             if ($e->getCode() === 404) {
                 throw new ModelNotFoundException('The requested Resource does not exist.');
