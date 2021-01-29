@@ -1,6 +1,8 @@
 <?php
 
+
 namespace App\Services\Auth;
+
 
 use App\Models\User;
 use Illuminate\Contracts\Auth\Authenticatable;
@@ -22,17 +24,17 @@ class JwtHydraAuth implements Guard
 
     public function check()
     {
-        return $this->user !== null;
+        return ($this->user !== NULL);
     }
 
     public function guest()
     {
-        return ! $this->check();
+        return !$this->check();
     }
 
     public function user()
     {
-        if ($this->user !== null) {
+        if ($this->user !== NULL) {
             return $this->user;
         }
     }
@@ -47,7 +49,7 @@ class JwtHydraAuth implements Guard
     public function validate(array $credentials = [])
     {
         if (empty($credentials['username']) || empty($credentials['password'])) {
-            if (! $credentials = $this->getJsonParams()) {
+            if (!$credentials=$this->getJsonParams()) {
                 return false;
             }
         }
@@ -66,7 +68,6 @@ class JwtHydraAuth implements Guard
     public function setUser(Authenticatable $user)
     {
         $this->user = $user;
-
         return $this;
     }
 }
