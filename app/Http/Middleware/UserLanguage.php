@@ -12,9 +12,10 @@ class UserLanguage
 {
     public function handle(Request $request, Closure $next)
     {
-        if(Auth::user()) {
+        if (Auth::user()) {
             App::setLocale(Auth::user()->language);
         }
+
         return $next($request);
     }
 }
