@@ -14,7 +14,7 @@ class JwtHydraAuth implements Guard
 {
     protected Request $request;
     protected UserProvider $provider;
-    protected User|null $user;
+    protected User $user;
 
     public function __construct(UserProvider $provider, Request $request)
     {
