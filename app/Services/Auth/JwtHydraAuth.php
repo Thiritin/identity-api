@@ -20,7 +20,6 @@ class JwtHydraAuth implements Guard
     {
         $this->request = $request;
         $this->provider = $provider;
-        $this->user = NULL;
     }
 
     public function check()
