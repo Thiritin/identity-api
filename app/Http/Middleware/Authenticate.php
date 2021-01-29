@@ -18,6 +18,7 @@ class Authenticate extends Middleware
         if (! $request->expectsJson() && $request->getHost() === config('backpack.base.route_domain')) {
             return route('login');
         }
-        return abort(400,"Request malformed.");
+
+        return abort(400, 'Request malformed.');
     }
 }

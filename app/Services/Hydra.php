@@ -59,9 +59,9 @@ class Hydra
     {
         try {
             return $this->api->acceptConsentRequest($consentChallenge, new AcceptConsentRequest([
-                "grantScope" => ["openid", "offline_access"],
-                "remember" => "true",
-                "rememberFor" => "0"
+                'grantScope' => ['openid', 'offline_access'],
+                'remember' => 'true',
+                'rememberFor' => '0',
             ]));
         } catch (Exception $e) {
             if ($e->getCode() === 404) {
