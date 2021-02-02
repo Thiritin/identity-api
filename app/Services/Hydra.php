@@ -2,6 +2,7 @@
 
 namespace App\Services;
 
+use App\Models\User;
 use Exception;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Support\Facades\Log;
@@ -23,7 +24,8 @@ class Hydra
     public function getLoginRequest(string $loginChallenge)
     {
         try {
-            return $this->api->getLoginRequest($loginChallenge);
+            $data = $this->api->getLoginRequest($loginChallenge);
+            return json_decode($data);
         } catch (Exception $e) {
             if ($e->getCode() === 404) {
                 throw new ModelNotFoundException('The requested Resource does not exist.');
@@ -36,16 +38,15 @@ class Hydra
     public function acceptLoginRequest(string $userId, string $loginChallenge)
     {
         try {
-            return json_decode(
-                $this->api->acceptLoginRequest(
+            $data = $this->api->acceptLoginRequest(
                     $loginChallenge,
                     new AcceptLoginRequest(
                         [
                             'subject' => $userId,
                         ]
                     )
-                )
-            );
+                );
+            return json_decode($data);
         } catch (Exception $e) {
             if ($e->getCode() === 404) {
                 throw new ModelNotFoundException('The requested Resource does not exist.');
@@ -55,19 +56,43 @@ class Hydra
         }
     }
 
-    public function acceptConsentRequest(string $consentChallenge)
+    public function acceptConsentRequest(string $consentChallenge, User $user)
     {
         try {
-            return $this->api->acceptConsentRequest($consentChallenge, new AcceptConsentRequest([
-                'grantScope' => ['openid', 'offline_access'],
-                'remember' => 'true',
-                'rememberFor' => '0',
+            $data = $this->api->acceptConsentRequest($consentChallenge, new AcceptConsentRequest([
+                'grantScope' => ['openid', 'offline_access'], // array
+                'remember' => true, // boolean
+                'rememberFor' => 600, // integer
+                'session' => [
+                    'id_token' => [
+                        "global" => [
+                            "name" => $user->name,
+                            "email" => $user->email,
+                            "roles" => $user->roles->pluck('name')
+                        ]
+                    ]
+                ]
             ]));
+            return json_decode($data);
         } catch (Exception $e) {
             if ($e->getCode() === 404) {
                 throw new ModelNotFoundException('The requested Resource does not exist.');
             }
             throw $e;
+        }
+    }
+
+    public function getConsentRequest(string $consentRequest)
+    {
+        try {
+            $data = $this->api->getConsentRequest($consentRequest);
+            return json_decode($data);
+        } catch (Exception $e) {
+            if ($e->getCode() === 404) {
+                throw new ModelNotFoundException('The requested Resource does not exist.');
+            }
+
+            return $e;
         }
     }
 }

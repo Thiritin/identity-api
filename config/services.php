@@ -31,7 +31,12 @@ return [
     ],
 
     'hydra' => [
-        'host' => env('HYDRA_HOST'),
+        'public' => [
+            'url' => env('HYDRA_PUBLIC_URL')
+        ],
+        'admin' => [
+            'url' => env('HYDRA_ADMIN_URL')
+        ]
     ],
 
 ];
