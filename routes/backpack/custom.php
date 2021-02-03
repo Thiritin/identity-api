@@ -23,8 +23,12 @@ Route::group([
     /**
      * Authentication
      */
+    Route::get('callback', [LoginController::class, 'init'])
+        ->name('admin.login.callback')
+        ->middleware('guest')
+        ->withoutMiddleware(config('backpack.base.middleware_key', 'admin'));
     Route::get('login', [LoginController::class, 'init'])
-        ->name('backpack.dashboard')
+        ->name('admin.login.init')
         ->middleware('guest')
         ->withoutMiddleware(config('backpack.base.middleware_key', 'admin'));
 });

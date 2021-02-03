@@ -29,14 +29,24 @@ return [
         'secret' => env('AWS_SECRET_ACCESS_KEY'),
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
-
-    'hydra' => [
-        'public' => [
-            'url' => env('HYDRA_PUBLIC_URL')
+    /*
+    |--------------------------------------------------------------------------
+    | Hydra
+    |--------------------------------------------------------------------------
+    */
+    'oidc' => [
+        'main' => [
+            'client_id' => env('OIDC_MAIN_CLIENT_ID'),
+            'secret' => env('OIDC_MAIN_SECRET')
         ],
         'admin' => [
-            'url' => env('HYDRA_ADMIN_URL')
-        ]
+            'client_id' => env('OIDC_ADMIN_CLIENT_ID'),
+            'secret' => env('OIDC_ADMIN_SECRET')
+        ],
     ],
-
+    'hydra' => [
+        'public' => env('HYDRA_PUBLIC_URL'),
+        'local_public' => env('HYDRA_LOCAL_PUBLIC'), # For Dev purposes
+        'admin' => env('HYDRA_ADMIN_URL')
+    ]
 ];

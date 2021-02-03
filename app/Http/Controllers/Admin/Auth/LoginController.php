@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Admin\Auth;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Http;
 use Jumbojett\OpenIDConnectClient;
 
 class LoginController extends Controller
@@ -13,19 +15,23 @@ class LoginController extends Controller
     public function init()
     {
         $oidc = new OpenIDConnectClient(
-            config('services.hydra.public.url'),
-            'ce94f7ac-1c9a-4d5d-8159-56b37562f9b1',
-            'optimus1'
+            config('services.hydra.public'),
+            config('services.oidc.admin.client_id'),
+            config('services.oidc.admin.secret')
         );
+        /**
+         * Only for development
+         */
+        if(App::isLocal()) {
+            $oidc->setVerifyHost(false);
+            $oidc->setVerifyPeer(false);
+            $oidc->providerConfigParam([
+                "authorization_endpoint" => config('services.hydra.local_public')."/oauth2/auth",
+                "token_endpoint" => config('services.hydra.local_public')."/oauth2/token",
+                "jwks_uri" => config('services.hydra.local_public')."/.well-known/jwks.json",
+            ]);
+        }
         $oidc->setRedirectURL(route('admin.login.callback'));
         $oidc->authenticate();
-    }
-
-    /**
-     * Exchange token and save userid to session.
-     */
-    public function callback()
-    {
-
     }
 }
