@@ -22,7 +22,7 @@
         "laravel/tinker": "^2.5",
         "rbdwllr/reallysimplejwt": "^3.1",
         "spatie/laravel-activitylog": "^3.16",
-        "spatie/laravel-enum": "^2.2",
+        "spatie/laravel-enum": "^2.2", 
         "spatie/laravel-permission": "^3.17",
         "spatie/laravel-query-builder": "^3.3",
         "thiritin/hydra-client": "^1.9",

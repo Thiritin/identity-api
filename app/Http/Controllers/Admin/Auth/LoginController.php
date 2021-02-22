@@ -19,6 +19,7 @@ class LoginController extends Controller
             config('services.oidc.admin.client_id'),
             config('services.oidc.admin.secret')
         );
+        $oidc->addScope('openid','admin');
         /**
          * Only for development
          */
